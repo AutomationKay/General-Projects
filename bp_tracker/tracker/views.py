@@ -38,6 +38,12 @@ def log_reading(request):
     return render(request, 'tracker/log_reading.html', {'form': form})
 
 @login_required
+def log_reading_result(request):
+    comparison = request.session.get('comparison')
+    reading = request.session.get('reading')
+    return render(request, 'tracker/log_reading_result.html', {'reading': reading, 'comparison': comparison})
+
+@login_required
 def view_averages(request):
     readings = Reading.objects.filter(user=request.user).order_by('-timestamp')[:7]
     if readings.exists():
