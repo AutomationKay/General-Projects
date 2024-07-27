@@ -7,12 +7,14 @@ class Reading(models.Model):
     diastolic = models.IntegerField()
     pulse = models.IntegerField()
     timestamp = models.DateTimeField(auto_now_add=True)
-
+    weight = models.FloatField() # in lbs
+    height = models.FloatField() # in feet
+    age = models.FloatField() # in years
 
     def __str__(self):
         """
         
         
         """
-        return f"{self.systolic}/{self.diastolic} (Pulse: {self.pulse})"
+        return f"{self.user.username} - {self.timestamp}"
     
