@@ -28,6 +28,10 @@ def log_reading(request):
             
             #Fetch blood pressure range based on the input
             bp_range = get_blood_pressure_range(reading.weight, reading.height, reading.age)
+            comparison = {
+                'systolic' : 'normal' if bp_range['systolic'][0] <= reading.systolic <= bp_range['systolic'][1] else 'abnormal',
+                'diastolic' : 'normal' if bp_range['diastolic'][0] <= reading.diastolic <= bp_range['diastolic'][1] else 'abnormal'
+                }
             return redirect('view_averages')
     else:
         form = ReadingForm()

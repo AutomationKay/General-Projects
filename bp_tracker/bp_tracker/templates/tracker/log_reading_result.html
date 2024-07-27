@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Reading Result{% endblock %}
+
+{% block content %}
+<h2>Reading Result</h2>
+<p><strong>Systolic:</strong> {{ reading.systolic }} ({{ comparison.systolic }})</p>
+<p><strong>Diastolic:</strong> {{ reading.diastolic }} ({{ comparison.diastolic }})</p>
+<p><strong>Pulse:</strong> {{ reading.pulse }}</p>
+<a href="{% url 'log_reading' %}" class="btn btn-primary">Log Another Reading</a>
+{% endblock %}
