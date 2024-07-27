@@ -8,4 +8,5 @@ urlpatterns = [
     path('log/', views.log_reading, name='log_reading'),
     path('averages/', views.view_averages, name='view_averages'),
     path('trends/', views.display_trends, name='display_trends'),
+    path('log/result/', views.log_reading_result, name='log_reading_result'),
 ]
