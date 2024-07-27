@@ -5,5 +5,5 @@ from .models import Reading
 class ReadingForm(forms.ModelForm):
     class Meta:
         model = Reading
-        fields = ['systolic', 'diastolic', 'pulse']
+        fields = ['systolic', 'diastolic', 'pulse', 'weight', 'height', 'age']
 

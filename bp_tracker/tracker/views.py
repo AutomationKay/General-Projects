@@ -10,6 +10,7 @@ import base64
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
+from .blood_pressure_data import get_blood_pressure_range
 
 
 def home(request):
@@ -24,6 +25,9 @@ def log_reading(request):
             reading.user = request.user
             reading.save()
             send_notifications_if_needed(reading)
+            
+            #Fetch blood pressure range based on the input
+            bp_range = get_blood_pressure_range(reading.weight, reading.height, reading.age)
             return redirect('view_averages')
     else:
         form = ReadingForm()
