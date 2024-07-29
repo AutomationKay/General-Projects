@@ -20,8 +20,8 @@
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'log_reading' %}">Log a Reading</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'view_averages' %}">View Averages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'display_trends' %}">Display Trends</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'view_averages_and_trends' %}">View Averages and Trends</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'view_comparisons' %}">View Comparisons</a></li>
                     <li class="nav-item">
                         <form method="post" action="{% url 'account_logout' %}" style="display: inline;">
                             {% csrf_token %}

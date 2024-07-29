@@ -1,0 +1,23 @@
+<!-- tracker/templates/tracker/view_comparisons.html -->
+{% extends 'base.html' %}
+
+{% block title %}Comparisons{% endblock %}
+
+{% block content %}
+<h2>Average Readings</h2>
+<p>Systolic: {{ averages.systolic__avg }}</p>
+<p>Diastolic: {{ averages.diastolic__avg }}</p>
+<p>Pulse: {{ averages.pulse__avg }}</p>
+
+<h2>Country Averages</h2>
+<p>Systolic: {{ country_avg.systolic }}</p>
+<p>Diastolic: {{ country_avg.diastolic }}</p>
+
+<h2>Global Averages</h2>
+<p>Systolic: {{ global_avg.systolic }}</p>
+<p>Diastolic: {{ global_avg.diastolic }}</p>
+
+<h2>Trends</h2>
+<img src="data:image/png;base64,{{ image }}" alt="Blood Pressure Trends"/>
+
+{% endblock %}

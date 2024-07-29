@@ -1,28 +1,75 @@
-# Blood pressure data based on ranges of
-# weight (lbs) , height (ft), and age (years)
-blood_pressure_levels = {
-    # Test structure
-    'default': {'systolic': [90, 120], 'diastolic': [60, 80]},
-    (20, 30): {
-        (100, 200): {
-            (5.0, 6.5): {'systolic': [110, 130], 'diastolic': [70, 90]}
-        }
-    },
-    (30, 40): {
-        (150, 250): {
-            (5.5, 7.0): {'systolic': [115, 135], 'diastolic': [75, 95]}
-        }
-    },
-}
+# Blood pressure data based on 
+# country and sex
 
-def get_blood_pressure_range(weight, height, age):
-    for age_range, weight_ranges in blood_pressure_levels.items():
-        if age_range == 'default':
-            continue
-        if age_range[0] <= age <= age_range[1]:
-            for weight_range, height_ranges in weight_ranges.items():
-                if weight_range[0] <= weight <= weight_range[1]:
-                    for height_range, bp_values in height_ranges.items():
-                        if height_range[0] <= height <= height_range[1]:
-                            return bp_values
-    return blood_pressure_levels['default']
+import pandas as pd
+import os
+import logging
+from django.db.models import Avg 
+
+
+logger = logging.getLogger(__name__)
+
+
+# Get project base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Counstruct path for data
+data_path = os.path.join(BASE_DIR, 'data', 'bp_standardised_cleaned.csv')
+
+# Load in the dataset
+data = pd.read_csv(data_path)
+
+# Calculate the averages per sex and per country
+country_sex_avg = data.groupby(['country', 'sex']).agg({'systolic': 'mean', 'diastolic': 'mean'}).reset_index()
+
+# Calculate the global averages per sex
+global_sex_avg = data.groupby('sex').agg({'systolic': 'mean', 'diastolic': 'mean'}).reset_index()
+
+
+# Function to fetch blood pressure ranges
+def get_blood_pressure_range(sex, country):
+    logger.debug(f"Fetching blood pressure range for sex: {sex}, country: {country}")
+
+    # Check if country is available in the dataset
+    country_avg = country_sex_avg[(country_sex_avg['country'].str.lower() == country.lower()) & (country_sex_avg['sex'].str.lower() == sex.lower())]
+    if not country_avg.empty:
+        avg_systolic = country_avg['systolic'].mean()
+        avg_diastolic = country_avg['diastolic'].mean()
+        logger.debug(f"Found country averages: systolic={avg_systolic}, diastolic={avg_diastolic}")
+        return {
+            'country': {
+                'systolic': [avg_systolic - 10, avg_systolic + 10],
+                'diastolic': [avg_diastolic - 10, avg_diastolic + 10]
+            },
+            'default': {
+                'systolic': [90, 120],
+                'diastolic': [60, 80]
+            }
+        }
+    else:
+        logger.debug(f"No country averages found for country: {country}, sex: {sex}")
+
+    # Check global averages
+    global_avg = global_sex_avg[global_sex_avg['sex'].str.lower() == sex.lower()]
+    if not global_avg.empty:
+        avg_systolic = global_avg['systolic'].mean()
+        avg_diastolic = global_avg['diastolic'].mean()
+        logger.debug(f"Found global averages: systolic={avg_systolic}, diastolic={avg_diastolic}")
+        return {
+            'global': {
+                'systolic': [avg_systolic - 10, avg_systolic + 10],
+                'diastolic': [avg_diastolic - 10, avg_diastolic + 10]
+            },
+            'default': {
+                'systolic': [90, 120],
+                'diastolic': [60, 80]
+            }
+        }
+
+    logger.debug("Returning default averages")
+    return {
+        'default': {
+            'systolic': [90, 120],
+            'diastolic': [60, 80]
+        }
+    }
