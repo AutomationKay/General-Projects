@@ -30,19 +30,19 @@ pip install -r requirements.txt
 
 ## Configuring Environment Variables
 Create a '.env' file in the project root and add the following environment variables:
-SECRET_KEY=your_secret_key
-DEBUG=True
-EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=your_email@gmail.com
-EMAIL_HOST_PASSWORD=your_email_password
-DEFAULT_FROM_EMAIL=your_email@gmail.com
+- SECRET_KEY=your_secret_key
+- DEBUG=True
+- EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+- EMAIL_HOST=smtp.gmail.com
+- EMAIL_PORT=587
+- EMAIL_USE_TLS=True
+- EMAIL_HOST_USER=your_email@gmail.com
+- EMAIL_HOST_PASSWORD=your_email_password
+- DEFAULT_FROM_EMAIL=your_email@gmail.com
 
 ## Run Migrations
-python manage.py makemigrations
-python manage.py migrate
+- python manage.py makemigrations
+- python manage.py migrate
 
 ## Create a Superuser
 python manage.py createsuperuser
@@ -51,9 +51,9 @@ python manage.py createsuperuser
 python manage.py runserver
 
 ## Usage
-- **Navigate to http://127.0.0.1:8000/ in your web browser.
-- **Log in using the superuser account you created.
-- **Use the navigation bar to log readings, view averages and trends, and compare your readings.
+- Navigate to http://127.0.0.1:8000/ in your web browser.
+- Log in using the superuser account you created.
+- Use the navigation bar to log readings, view averages and trends, and compare your readings.
 
 ## Testing
 Run the tests to ensure everything is working correctly:
