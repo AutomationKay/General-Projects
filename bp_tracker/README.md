@@ -57,7 +57,7 @@ python manage.py runserver
 
 ## Testing
 Run the tests to ensure everything is working correctly:
-python manage.py test tracker
+- python manage.py test tracker
 
 ## Machine Learning Model
 This application uses a RandomForestClassifier to predict high blood pressure based on user readings. The model is trained using the 'train_model.py' script.
