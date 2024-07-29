@@ -1,1 +1,9 @@
 .env
+
+# Ignore virutal environment
+venv/
+bp_env/
+
+# Ingore Python cache files
+__pycache__/
+*.py[cod]
