@@ -1,4 +1,4 @@
-```plaintext
+
 Django==5.0.7
 pandas
 matplotlib
