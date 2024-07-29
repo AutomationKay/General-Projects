@@ -22,8 +22,8 @@ This is a Blood Pressure Tracker application developed using Django. The applica
 - Scikit-learn
 
 ## Create a Virtual Environment
-python -m venv bp_env
-source bp_env/bin/activate  # On Windows, use `bp_env\Scripts\activate`
+1. python -m venv bp_env
+2. source bp_env/bin/activate  # On Windows, use `bp_env\Scripts\activate`
 
 ## Instal Dependencies
 pip install -r requirements.txt
