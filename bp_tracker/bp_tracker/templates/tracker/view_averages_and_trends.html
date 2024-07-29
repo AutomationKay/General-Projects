@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Averages and Trends{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Average Readings</h2>
+    <p>Systolic: {{ averages.systolic__avg }}</p>
+    <p>Diastolic: {{ averages.diastolic__avg }}</p>
+    <p>Pulse: {{ averages.pulse__avg }}</p>
+
+    <h2>Trends</h2>
+    <img src="data:image/png;base64,{{ image }}" alt="Trends Graph" />
+</div>
+{% endblock %}
