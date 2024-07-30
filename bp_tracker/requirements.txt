@@ -1,0 +1,6 @@
+
+Django==5.0.7
+pandas
+matplotlib
+scikit-learn
+python-decouple
