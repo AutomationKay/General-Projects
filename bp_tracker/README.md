@@ -1,5 +1,6 @@
 
 # Blood Pressure Tracker
+![Blood Pressure Tracker](./images/Bp_tracker_1.png)
 
 This is a Blood Pressure Tracker application developed using Django. The application allows users to log their blood pressure readings, view trends and comparisons, and get insights based on country and global averages.
 
