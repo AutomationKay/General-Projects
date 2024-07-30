@@ -14,13 +14,23 @@ from django.http import HttpResponse  # For returning HTTP responses
 from .blood_pressure_data import get_blood_pressure_range  # For getting blood pressure range based on certain criteria
 import logging # For tracking and debugging issues
 import joblib # For loading the trained model
+import os # For getting the trained model location
+
 
 # Setting up logging 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+# Get project base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Counstruct path for model and encoder
+model_path = os.path.join(BASE_DIR, 'models', 'bp_model.pkl')
+encoder_path = os.path.join(BASE_DIR, 'models', 'label_encoder.pkl')
+
 # Loading the trained model
-model = joblib.load('bp_model.pkl')
+model = joblib.load(model_path)
+encoder = joblib.load(encoder_path)
 
 def home(request):
     return render(request, 'tracker/home.html')
@@ -40,8 +50,15 @@ def log_reading(request):
             reading.save()
             send_notifications_if_needed(reading)
             
-            # Predict potential high blood pressure
-            user_data = [[reading.systolic, reading.diastolic, reading.pulse, 0 if reading.sex == 'male' else 1]]
+            # Prepare the data for prediction
+            user_data = pd.DataFrame({
+                'systolic' : [reading.systolic],
+                'diastolic' : [reading.diastolic],
+                'sex' : [0 if reading.sex == 'male' else 1],
+                'country': [encoder.transform([reading.country])[0]]
+            })
+            
+            # Make prediction
             prediction = model.predict(user_data)
             prediction_text = "High blood pressure risk" if prediction[0] else "Normal blood pressure"
 

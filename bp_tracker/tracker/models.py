@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import Avg   
 
 class Reading(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -9,6 +10,8 @@ class Reading(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     country = models.CharField(max_length=100) 
     sex = models.CharField(max_length=10) 
+    country_avg_systolic = models.FloatField()
+    country_avg_diastolic = models.FloatField()
     
     # Fields for country and global averages
     country_avg_systolic = models.FloatField(default=0)
