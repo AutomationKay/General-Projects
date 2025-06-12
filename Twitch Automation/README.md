@@ -3,7 +3,7 @@
 This Python script demonstrates automation of browser interactions through Google Chrome using pyautogui. It refreshes pages, switches tabs, moves the mouse randomly, clicks at specified coordinates, and types randomized emotes in a continuous loop. 
 
 
-# Features
+## Features
 Randomized delays between actions to simulate human behavior.
 
 Page refresh via hotkey (Ctrl+R).
@@ -20,7 +20,7 @@ Logging of each step (with timestamps) into a log file (chrome_script.log) for d
 
 Infinite loop structure to run continuously until manually stopped.
 
-Prerequisites
+## Prerequisites
 Python 3.9+
 
 The following Python packages:
@@ -33,7 +33,7 @@ Appropriate permissions/settings to allow automated control of mouse/keyboard.
 
 Terminal or environment for running the script.
 
-Installation
+## Installation
 Clone or download this repository to your local machine.
 
 Create a virtual environment:
@@ -52,8 +52,9 @@ Edit
 pip install pyautogui
 Note: On some systems, pyautogui may require additional dependencies (e.g., python3-tk on Linux). Follow any prompts or refer to the PyAutoGUI documentation as needed.
 
-Configuration
-Coordinates:
+## Configuration
+
+* Coordinates:
 
 The script uses hard-coded coordinates for clicking (e.g., chat_box_x = 2322, chat_box_y = 1322).
 
@@ -83,7 +84,7 @@ The script runs in an infinite while True loop.
 
 To stop, you can press Ctrl+C in the terminal or otherwise terminate the process.
 
-Usage
+## Usage
 Open your browser (e.g., Google Chrome) and navigate to the page where you want automation (e.g., a chat interface).
 
 Position the window so that the target elements align with the configured coordinates.
@@ -112,7 +113,7 @@ Wait again, then switch to next tab, etc.
 
 Monitor chrome_script.log for detailed timestamps and action records. This helps verify that actions occurred as expected or troubleshoot issues.
 
-Logging
+## Logging
 All key actions and chosen delays/coordinates are logged with timestamps:
 
 File: chrome_script.log
