@@ -1,0 +1,241 @@
+---
+title: "Final Project"
+author: "Kamaal Bartlett"
+date: "2024-06-01"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+library(Sleuth3)
+library(dplyr)
+library(ggplot2)
+library(broom)
+library(pwr)
+library(effsize)
+```
+
+## Identify Team Members, Data Source and Statistical Questions
+
+Team Members: Kamaal Bartlett
+
+Data Source: Sleuth3 (case 1202)
+
+Statistical Questions:
+1. Is there a significant difference in starting salary between men and women at the bank?
+2. How does the inclusion of gender as a variable in a regression model affect the predictability of starting salaries?
+
+## Exploratory Data Analysis
+
+First, we'll load the data set and examine the raw data to get a better understanding before performing any analysis.
+
+```{r}
+#Load the dataset
+data(case1202)
+df = case1202
+
+#Viewing the structure of the dataset
+str(df)
+
+#Viewing the first few rows of the dataset
+head(df)
+
+#Load dplyr if not already loaded
+if (!requireNamespace("dplyr", quietly = TRUE)) {
+  install.packages("dplyr")
+}
+library(dplyr)
+
+#General summary for all data
+overall_summary <- df %>%
+  summarise(
+    MeanSalary = mean(Bsal, na.rm = TRUE),
+    MedianSalary = median(Bsal, na.rm = TRUE),
+    StdDevSalary = sd(Bsal, na.rm = TRUE),
+    MinSalary = min(Bsal, na.rm = TRUE),
+    MaxSalary = max(Bsal, na.rm = TRUE)
+  )
+
+#Print overall summary
+print("Overall Summary:")
+print(overall_summary)
+
+#Summary by Gender
+gender_summary <- df %>%
+  group_by(Sex) %>%
+  summarise(
+    MeanSalary = mean(Bsal, na.rm = TRUE),
+    MedianSalary = median(Bsal, na.rm = TRUE),
+    StdDevSalary = sd(Bsal, na.rm = TRUE),
+    MinSalary = min(Bsal, na.rm = TRUE),
+    MaxSalary = max(Bsal, na.rm = TRUE),
+    .groups = 'drop'  # Drop the grouping structure after summarising
+  )
+
+#Print gender-specific summary
+print("Gender-Specific Summary:")
+print(gender_summary)
+```
+
+## Exploring Relationships
+```{r}
+#Scatter plot matrix
+pairs(df[, c("Bsal", "Sal77", "Senior", "Age", "Educ", "Exper")])
+
+#Correlation matrix
+cor(df[, c("Bsal", "Sal77", "Senior", "Age", "Educ", "Exper")])
+
+```
+
+
+## Visual Representation
+```{r}
+library(ggplot2)
+
+ggplot(df, aes(x = Sex, y = Bsal)) +
+  geom_boxplot() +
+  labs(title = "Boxplot of Starting Salaries by Sex",
+       x = "Sex",
+       y = "Starting Salary") +
+  theme_minimal()
+
+```
+
+
+## Two Sample Test
+```{r}
+#Two-sample t-test
+t_test_result <- t.test(Bsal ~ Sex, data = df)
+t_test_result
+
+```
+
+We chose the two-sample t-test because it is appropriate for comparing the means of two independent groups (men and women). The t-test assumes that the data are approximately normally distributed and that the variances are equal, which we checked using diagnostic plots
+
+## Power Analysis
+```{r}
+#Power analysis
+library(pwr)
+effect_size <- cohen.d(df$Bsal ~ df$Sex)$estimate
+power_test <- pwr.t2n.test(n1 = sum(df$Sex == "Male"), n2 = sum(df$Sex == "Female"), d = effect_size, sig.level = 0.05)
+power_test
+
+```
+
+### Why Regression is More Powerful
+Regression analysis is more powerful than simply comparing two populations because it allows us to control for multiple variables simultaneously. This means we can isolate the effect of gender on salary while accounting for other factors such as experience, education, and seniority. This provides a more accurate and comprehensive understanding of the factors influencing salary.
+
+## Regression Analysis
+
+### Building the Regression Model Without Gender
+```{r}
+#Forward Selection
+model_forward <- step(lm(Bsal ~ 1, data = df), direction = "forward", 
+                      scope = ~ Sal77 + Senior + Age + Educ + Exper)
+
+#Backward Elimination
+model_backward <- step(lm(Bsal ~ Sal77 + Senior + Age + Educ + Exper, data = df), direction = "backward")
+
+#Summarize the models
+summary(model_forward)
+summary(model_backward)
+
+```
+
+
+## Interaction Terms
+To explore potential interactions between predictors and the gender variable, we build a model with interaction terms
+```{r}
+#Interaction terms model
+model_interaction <- lm(Bsal ~ Educ * Senior + Exper * Senior + Sal77 * Senior + Age * Senior, data = df)
+summary(model_interaction)
+
+```
+
+## Transformations
+To account for potential non-linear relationships, we can transform the response and variable and build a new model
+```{r}
+#Log transformation of the response variable
+df$log_Bsal <- log(df$Bsal)
+
+#Model with transformed response variable
+model_transformed <- lm(log_Bsal ~ ., data = df)
+summary(model_transformed)
+
+
+```
+
+
+## Adding the Gender Variable and Assessing Its IMpact
+We add the gender variable to our best model to assess its impact
+```{r}
+#Adding the gender variable
+best_model_with_gender <- update(model_forward, . ~ . + Sex)
+summary(best_model_with_gender)
+
+#Comparing models
+anova(model_forward, best_model_with_gender)
+
+```
+
+
+## Visualization of Results
+```{r}
+#Boxplot of salaries by gender
+ggplot(df, aes(x = Sex, y = Bsal, fill = Sex)) +
+  geom_boxplot() +
+  labs(title = "Starting Salary by Gender", x = "Gender", y = "Starting Salary")
+
+#Scatter plot matrix with best model predictors
+pairs(df[, c("Bsal", "Sal77", "Senior", "Age", "Educ", "Exper")])
+
+#Coefficients comparison plot
+coeffs_model1 <- broom::tidy(model_forward)
+coeffs_model2 <- broom::tidy(best_model_with_gender)
+
+coeffs_model1$model <- "Without Sex"
+coeffs_model2$model <- "With Sex"
+
+coeffs_combined <- bind_rows(coeffs_model1, coeffs_model2) %>%
+  filter(term != "(Intercept)")
+
+ggplot(coeffs_combined, aes(x = term, y = estimate, fill = model)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  labs(title = "Comparison of Regression Coefficients", x = "Predictors", y = "Coefficient Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+#R-squared values plot
+r_squared_data <- data.frame(
+  model = c("Without Sex", "With Sex"),
+  r_squared = c(summary(model_forward)$r.squared, summary(best_model_with_gender)$r.squared)
+)
+
+ggplot(r_squared_data, aes(x = model, y = r_squared, fill = model)) +
+  geom_bar(stat = "identity", width = 0.5) +
+  labs(title = "Comparison of R-squared Values", x = "Model", y = "R-squared") +
+  theme_minimal()
+
+```
+
+##Conclusions and Implications
+
+###Statistical Significance of Sex
+The inclusion of the gender variable significantly improves the model's predictive ability, as evidenced by the ANOVA and the increase in R-squared value. The F-test from the ANOVA confirms that adding the sex/gender variable contributes significantly to the model.
+
+###Economic and Policy Implications
+The significant coefficient for SexMale suggests that there is a gender pay gap favoring males at this bank. This finding could have implications for policy and practices within the bank regarding pay equity.
+
+###Possibility of Designed Experiment
+A designed experiment for this data set would involve randomly assigning salaries to employees to remove any existing biases. However, this is impractical and unethical in a real-world setting.
+
+##Conclusion
+The statistical analysis suggests a significant gender pay gap favoring males at this bank. The findings could have implications for the bank's policies and practices regarding pay equity.
+
+###Statistical Conclusion
+The inclusion of the gender variable significantly improves the model's predictive power, indicating a substantial gender pay gap.
+
+###Conclusion for a Judge
+Based on statistical evidence, there is a significant gender pay gap at this bank, favoring men. This finding is consistent with potential gender discrimination, which the bank should address through policy changes and corrective actions.

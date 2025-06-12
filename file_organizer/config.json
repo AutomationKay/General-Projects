@@ -1,0 +1,25 @@
+{
+    "source_dir": "/home/user/Downloads",
+    "dest_dirs": {
+        "images": "/home/user/Downloads/Images",
+        "music": "/home/user/Downloads/Music",
+        "videos": "/home/user/Downloads/Videos",
+        "documents": "/home/user/Downloads/Documents",
+        "archives": "/home/user/Downloads/Archives",
+        "apps": "/home/user/Downloads/Apps"
+    }
+}
+
+{
+    "source_dir": "${USERPROFILE}/Downloads",
+    "dest_dirs": {
+        "images": "${USERPROFILE}/Downloads/Images",
+        "documents": "${USERPROFILE}/Downloads/Documents",
+        "videos": "${USERPROFILE}/Downloads/Videos"
+    },
+    "extensions": {
+        "images": [ ".jpg", ".jpeg", ".png" ],
+        "documents": [ ".pdf", ".docx" ],
+        "videos": [ ".mp4", ".avi" ]
+    }
+}

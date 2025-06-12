@@ -1,0 +1,594 @@
+---
+title: "Neural Network Project - Lung Cancer Pred"
+author: "Kamaal Bartlett"
+date: "2024-08-14"
+output: pdf_document
+---
+
+## Setup and Data Loading
+
+
+1.1 Load Necessary Libraries
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# Load necessary libraries
+library(nnet)
+library(neuralnet)
+library(caret)
+library(pROC)
+library(readr)  # For loading CSV files
+library(NeuralNetTools)
+library(reticulate)
+library(magrittr)
+library(ggplot2)
+library(lattice)
+library(smotefamily)
+
+
+```
+
+
+1.2 Load and Inspect Data
+```{r}
+# Load the dataset
+# https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer
+data <- read_csv("survey_lung_cancer.csv")
+
+# Displaying the first few rows of data
+head(data)
+
+```
+GENDER: Categorical variable indicating the gender (M or F).
+AGE: Numeric variable representing the age of the individual.
+SMOKING: Ordinal variable indicating the level of smoking.
+YELLOW_FINGERS: Ordinal variable indicating the presence of yellow fingers.
+ANXIETY: Ordinal variable indicating the level of anxiety.
+PEER_PRESSURE: Ordinal variable indicating the influence of peer pressure.
+CHRONIC DISEASE: Ordinal variable indicating the presence of chronic disease.
+FATIGUE: Ordinal variable indicating the level of fatigue.
+ALLERGY: Ordinal variable indicating the presence of allergy.
+WHEEZING: Ordinal variable indicating the presence of wheezing.
+ALCOHOL CONSUMING: Ordinal variable indicating alcohol consumption.
+COUGHING: Ordinal variable indicating the presence of coughing.
+SHORTNESS OF BREATH: Ordinal variable indicating shortness of breath.
+SWALLOWING DIFFICULTY: Ordinal variable indicating difficulty in swallowing.
+CHEST PAIN: Ordinal variable indicating the presence of chest pain.
+LUNG_CANCER: Categorical variable indicating whether the individual has lung cancer (YES or NO).
+
+
+1.3 Data Preprocessing
+```{r}
+# Convert categorical variables to numeric
+data$GENDER <- ifelse(data$GENDER == "M", 1, 0)
+data$LUNG_CANCER <- ifelse(data$LUNG_CANCER == "YES", 1, 0)
+
+# Normalize numeric variables
+normalize <- function(x) {
+  return ((x - min(x)) / (max(x) - min(x)))
+}
+data_normalized <- as.data.frame(lapply(data, normalize))
+
+```
+
+```{r}
+# Checking for missing values
+sum(is.na(data_normalized))
+
+# Display the first few rows of the preprocessed data
+head(data_normalized)
+```
+### Missing Values: 
+The result of the sum(is.na(data_normalized)) indicates that there are no missing values in the data_normalized dataframe, meaning that the dataset is complete and ready for modeling.
+
+### First Few Rows of Data: 
+The output of head(data_normalized) shows the first six rows of the preprocessed data. Each column represents a feature that has been normalized to a range between 0 and 1. The columns include various features like GENDER, AGE, SMOKING, YELLOW_FINGERS, etc. The rows represent individual records with normalized values for these features.
+
+1.4 Train/Test Split
+```{r}
+# Setting a seed for reproducibility
+set.seed(123)
+
+# Split the data into training (70%) and testing (30%) sets
+trainIndex <- createDataPartition(data_normalized$LUNG_CANCER, p = 0.7, list = FALSE, times = 1)
+dataTrain <- data_normalized[ trainIndex,]
+dataTest  <- data_normalized[-trainIndex,]
+
+```
+
+##2. Exploratory Data Analysis
+
+2.1 Summary and Descriptive Statistics
+```{r}
+# Viewing summary statistic of the data set before proceeding
+summary(dataTrain)
+
+```
+GENDER: The gender variable is binary, with a minimum of 0 (representing one gender) and a maximum of 1 (representing the other gender). The mean is 0.53, indicating a slightly higher proportion of individuals coded as 1.
+
+AGE: The age variable has been normalized, with values ranging from 0 to 1. The mean age is around 0.63, with the first quartile at 0.56 and the third quartile at 0.73.
+
+SMOKING to CHEST.PAIN: These variables are all binary, with values either 0 or 1. The summary shows that many of these features have a mean close to 0.5, indicating a relatively balanced distribution between the two categories.
+
+LUNG_CANCER: The target variable is also binary, with a mean of 0.8756, suggesting that a large proportion of the training data consists of individuals with lung cancer (coded as 1).
+
+
+2.2 Visualizations
+```{r}
+# Histogram of Age distribution
+hist(data$AGE, main="Distribution of Age", xlab="Age", col="blue")
+
+# Scatter plot: Age vs Smoking
+plot(data$AGE, data$SMOKING, main="Age vs Smoking", xlab="Age", ylab="Smoking Level")
+
+```
+The histogram of Age (hist(data$AGE)) shows the distribution of the AGE variable within the dataset. The majority of individuals in the dataset fall within the age range of 50 to 70, with a peak around 60-65 years old.
+
+The scatter plot (plot(data$AGE, data$SMOKING)) visualizes the relationship between AGE and SMOKING. The plot shows that smoking levels are either 0 or 1 across all age groups, with some individuals aged between 50 and 80 showing a smoking level of 2.
+
+
+
+## 3. Model Building and Evaluation
+
+3.1 Neural Network with neuralnet Library
+
+Using Sigmoid Activation
+```{r}
+# Checking column names before training the neural network
+names(dataTrain)
+```
+
+```{r}
+# Define the formula for the neural network
+formula <- LUNG_CANCER ~ GENDER + AGE + SMOKING + YELLOW_FINGERS + ANXIETY + 
+           PEER_PRESSURE + `CHRONIC.DISEASE` + FATIGUE + ALLERGY + WHEEZING + 
+           `ALCOHOL.CONSUMING` + COUGHING + `SHORTNESS.OF.BREATH` + 
+           `SWALLOWING.DIFFICULTY` + `CHEST.PAIN`
+
+# Train the neural network
+set.seed(123)
+nn <- neuralnet(formula, data=dataTrain, hidden=5, linear.output=FALSE)
+
+#summary of the model
+summary(nn)
+
+```
+
+```{r}
+# Plot the neural network
+png("neuralnetwork_plot.png", width = 2400, height = 1500, res = 200)
+
+# Seting up margins to prevent labels from being cut off
+par(mar = c(7, 7, 7, 7))  # bottom, left, top, right
+
+plotnet(nn, 
+        circle_col = "lightblue",   # Color of the nodes
+        circle_cex = 6,             # Increase the size of the nodes
+        pos_col = "blue",           # Color for positive weights
+        neg_col = "red",            # Color for negative weights
+        alpha = 0.6,                # Transparency level for edges
+        max_sp = TRUE,              # Maximum separation between nodes
+        rel_rsc = 15,               # Relative scaling of edges
+        cex = 0.4)                  # Reduce text size for labels
+dev.off()
+```
+```{r}
+plotnet(nn, 
+        circle_col = "lightblue",   # Color of the nodes
+        circle_cex = 6,             # Increase the size of the nodes
+        pos_col = "blue",           # Color for positive weights
+        neg_col = "red",            # Color for negative weights
+        alpha = 0.6,                # Transparency level for edges
+        max_sp = TRUE,              # Maximum separation between nodes
+        rel_rsc = 15,               # Relative scaling of edges
+        cex = 0.4)                  # Reduce text size for labels
+```
+Input Layer (Leftmost Layer):
+
+The nodes labeled with variables such as GENDER, AGE, SMOKING, YELLOW_FINGERS, etc., are the input features used in the model. Each node corresponds to one of these features.
+Hidden Layer (Middle Layer):
+
+The nodes labeled H1 to H5 are the hidden neurons in the network. In this case, there are 5 hidden neurons as specified in the model (hidden=5). These nodes receive input from the input layer and process the information before passing it on to the output layer.
+Output Layer (Rightmost Layer):
+
+The single node labeled O1 represents the output of the neural network, which in this case is the prediction for LUNG_CANCER. This output is based on the weighted sum of inputs from the hidden layer neurons.
+Connections (Edges):
+
+The colored lines between the nodes represent the weights assigned to the connections between layers.
+Red Lines: These indicate negative weights, meaning that the input feature reduces the activation of the connected neuron in the hidden layer.
+Blue Lines: These indicate positive weights, meaning that the input feature increases the activation of the connected neuron.
+Thickness of the Lines:
+
+The thickness of each line (edge) indicates the magnitude of the weight. Thicker lines correspond to stronger influences (whether positive or negative) between the connected nodes
+
+```{r}
+# Exclude the LUNG_CANCER column from dataTest
+input_data <- dataTest[, -ncol(dataTest)]
+
+```
+
+
+Evalulate Neural Network with 'neuralnet'
+```{r}
+
+# Perform the computation using the neuralnet model
+predictions_nn <- neuralnet::compute(nn, input_data)$net.result
+
+# Convert to binary class predictions
+predicted_class_nn <- ifelse(predictions_nn > 0.5, 1, 0)
+
+# Create confusion matrix
+confusion_matrix_nn <- table(predicted_class_nn, dataTest$LUNG_CANCER)
+print(confusion_matrix_nn)
+
+# Calculate accuracy
+accuracy_nn <- sum(diag(confusion_matrix_nn)) / sum(confusion_matrix_nn)
+print(paste("Accuracy with `neuralnet` model:", accuracy_nn))
+
+# Plot ROC curve
+roc_nn <- roc(dataTest$LUNG_CANCER, as.numeric(predicted_class_nn))
+plot(roc_nn, main="ROC Curve - `neuralnet` Model")
+print(paste("AUC with `neuralnet` model:", auc(roc_nn)))
+
+```
+###Confusion Matrix:
+True Positives (TP): 77 instances were correctly predicted as having lung cancer.
+True Negatives (TN): 6 instances were correctly predicted as not having lung cancer.
+False Positives (FP): 3 instances were incorrectly predicted as having lung cancer when they did not.
+False Negatives (FN): 6 instances were incorrectly predicted as not having lung cancer when they actually did.
+
+###Accuracy:
+
+The overall accuracy of the model is 90.22% (0.9022). This means that the model correctly predicted the class of lung cancer (presence or absence) in about 90% of the cases in the test set.
+
+###ROC Curve and AUC:
+
+The ROC (Receiver Operating Characteristic) curve visualizes the trade-off between sensitivity (True Positive Rate) and specificity (False Positive Rate).
+The area under the ROC curve (AUC) is 0.7313 (0.73125), indicating a moderate ability of the model to distinguish between the classes (lung cancer vs. no lung cancer). An AUC of 0.5 suggests no discriminative ability (random guessing), while an AUC of 1 indicates perfect classification. Thus, an AUC of 0.7313 suggests that the model performs reasonably well but leaves room for improvement.
+
+
+Trying a different activation function and loss function in 'neuralnet'
+```{r}
+
+# Training the model using 'tanh' activation function in 'neuralnet'
+nn_tanh <- neuralnet(formula, data=dataTrain, hidden=10, act.fct = "tanh", linear.output = FALSE)
+summary(nn_tanh)
+
+# Using Mean Squared Error as loss function (in neuralnet)
+nn_mse <- neuralnet(formula, data=dataTrain, hidden=10, act.fct = "logistic", err.fct = "sse", linear.output = FALSE)
+summary(nn_mse)
+```
+
+
+3.2 Neural Network with 'nnet' Library
+
+Sigmoid Activation and Binary Cross-Entropy Loss
+```{r}
+# Convert target variable back to numeric (0 and 1)
+y_train <- as.numeric(as.character(dataTrain$LUNG_CANCER))
+
+# Removing the target variable 'LUNG_CANCER' from 'dataTrain'
+x_train <- dataTrain[, -ncol(dataTrain)]
+
+# Fit the neural network model for classification
+nn_model <- nnet(x_train, y_train, size = 16, linout = FALSE, maxit = 200, decay = 0.001)
+
+# Summary of the model
+summary(nn_model)
+```
+
+```{r}
+# Save the improved plot as a high-resolution image
+png("improved_nn_plot.png", width = 2400, height = 1500, res = 200)
+
+# Setting up margins to prevent labels from being cut off
+par(mar = c(5, 5, 5, 5))  # bottom, left, top, right
+
+# Visualize the nnet model using plotnet
+plotnet(nn_model, 
+        circle_col = "lightblue",   # Color of the nodes
+        circle_cex = 6,             # Increase the size of the nodes
+        pos_col = "blue",           # Color for positive weights
+        neg_col = "red",            # Color for negative weights
+        alpha = 0.6,                # Transparency level for edges
+        max_sp = TRUE,              # Maximum separation between nodes
+        rel_rsc = 15,               # Relative scaling of edges
+        cex = 0.3)                  # Reduce text size for labels
+dev.off()
+
+```
+```{r}
+# Visualize the nnet model using plotnet
+plotnet(nn_model, 
+        circle_col = "lightblue",   # Color of the nodes
+        circle_cex = 6,             # Increase the size of the nodes
+        pos_col = "blue",           # Color for positive weights
+        neg_col = "red",            # Color for negative weights
+        alpha = 0.6,                # Transparency level for edges
+        max_sp = TRUE,              # Maximum separation between nodes
+        rel_rsc = 15,               # Relative scaling of edges
+        cex = 0.3)                  # Reduce text size for labels
+```
+
+
+3.3 Model Evaluation on Test Set
+
+Evaluate Model with 'nnet'
+```{r}
+# Make predictions with type = "class"
+predictions <- predict(nn_model, dataTest[, -ncol(dataTest)])
+
+# Evaluate performance
+confusion_matrix <- table(predictions, dataTest$LUNG_CANCER)
+print(confusion_matrix)
+
+# Calculate and display accuracy
+accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+print(paste("Accuracy with `nnet` model:", accuracy))
+
+# Plot ROC curve
+roc_nnet <- roc(dataTest$LUNG_CANCER, as.numeric(predictions))
+plot(roc_nnet, main="ROC Curve - `nnet` Model")
+print(paste("AUC with `nnet` model:", auc(roc_nnet)))
+
+```
+Evaluating the model using the MSE loss function
+```{r}
+# Predictions with the MSE loss function
+predictions_mse <- neuralnet::compute(nn_mse, dataTest[, -ncol(dataTest)])$net.result
+predicted_class_mse <- ifelse(predictions_mse > 0.5, 1, 0)
+
+# Create confusion matrix
+confusion_matrix_mse <- table(predicted_class_mse, dataTest$LUNG_CANCER)
+
+# Calculate and display accuracy 
+accuracy_mse <- sum(diag(confusion_matrix_mse)) / sum(confusion_matrix_mse)
+print(paste("Accuracy with MSE loss function:", accuracy_mse))
+```
+
+
+Trying SMOTE to boost results of the 'nnet' model
+
+```{r}
+smote_data <- SMOTE(dataTrain[, -ncol(dataTrain)], dataTrain$LUNG_CANCER, K=5, dup_size = 1)
+balanced_dataTrain <- smote_data$data
+balanced_dataTrain$LUNG_CANCER <- as.factor(balanced_dataTrain$class)
+balanced_dataTrain$class <- NULL
+table(balanced_dataTrain$LUNG_CANCER)
+```
+```{r}
+# Train the neural network
+set.seed(123)
+nn_balanced <- neuralnet(formula, data=balanced_dataTrain, hidden=5, linear.output=FALSE)
+
+# Summary of the model
+summary(nn_balanced)
+```
+
+```{r}
+nrow(dataTest[, -ncol(dataTest)])
+
+```
+
+```{r}
+predictions_balanced <- compute(nn_balanced, dataTest[, -ncol(dataTest)])$net.result
+predicted_class_balanced <- ifelse(predictions_balanced > 0.5, 1, 0)
+
+```
+
+
+Verrifying that the classes are balanced for the model
+```{r}
+length(predicted_class_balanced)
+length(dataTest$LUNG_CANCER)
+
+```
+
+```{r}
+dim(dataTest[, -ncol(dataTest)])
+dim(as.data.frame(predictions_balanced))
+head(predicted_class_balanced)
+
+```
+
+
+```{r}
+
+predictions_balanced <- compute(nn_balanced, dataTest[, -ncol(dataTest)])$net.result[, 2]
+
+# Convert probabilities to binary class predictions
+predicted_class_balanced <- ifelse(predictions_balanced > 0.5, 1, 0)
+
+# Create confusion matrix
+confusion_matrix_balanced <- table(predicted_class_balanced, dataTest$LUNG_CANCER)
+print(confusion_matrix_balanced)
+
+# Calculate and display accuracy
+accuracy_balanced <- sum(diag(confusion_matrix_balanced)) / sum(confusion_matrix_balanced)
+print(paste("Accuracy with SMOTE-balanced `nnet` model:", accuracy_balanced))
+
+```
+```{r}
+# Plot ROC curve for the SMOTE-balanced `nnet` model
+roc_balanced <- roc(dataTest$LUNG_CANCER, as.numeric(predicted_class_balanced))
+plot(roc_balanced, main="ROC Curve - SMOTE Balanced `nnet` Model")
+
+# Calculate and print the AUC
+auc_balanced <- auc(roc_balanced)
+print(paste("AUC with SMOTE-balanced `nnet` model:", auc_balanced))
+```
+
+Boosting the 'nnet' results using cross-validation and hyperparameter tuning to get the best results
+
+```{r}
+# Cross-validation setup
+set.seed(123)
+train_control <- trainControl(method = "cv", number = 5, classProbs = TRUE)  # 5-fold cross-validation
+
+# Grid for hyperparameter tuning
+tune_grid <- expand.grid(size = c(16, 32),  # Increase number of hidden neurons
+                         decay = c(0.001, 0.01, 0.1))  
+
+# Train the neural network model with cross-validation
+nn_model_cv <- train(formula, data = dataTrain, method = "nnet",
+                     trControl = train_control,
+                     tuneGrid = tune_grid,
+                     linout = FALSE, maxit = 500)  # Increase maxit
+
+# Summary of the model
+summary(nn_model_cv)
+```
+
+```{r}
+# Make predictions on the test set
+predictions <- predict(nn_model_cv, dataTest)
+
+# Evaluate performance
+confusion_matrix <- table(predictions, dataTest$LUNG_CANCER)
+print(confusion_matrix)
+
+# Calculate and display accuracy
+accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+print(paste("Accuracy with tuned `nnet` model:", accuracy))
+
+# Plot ROC curve
+roc_nnet_tuned <- roc(dataTest$LUNG_CANCER, as.numeric(predictions))
+plot(roc_nnet_tuned, main="ROC Curve - Tuned `nnet` Model")
+print(paste("AUC with tuned `nnet` model:", auc(roc_nnet)))
+```
+
+## Comparing the NNET models
+
+Combined ROC Curve Plot
+```{r}
+
+# Generate the ROC curve for the SMOTE-balanced nnet model
+roc_smote_nnet <- roc(dataTest$LUNG_CANCER, as.numeric(predicted_class_balanced))
+
+# Plot the ROC curve for the original nnet model
+plot(roc_nnet, col = "red", main = "Comparison of ROC Curves", lwd = 2)
+
+# Add the ROC curve for the SMOTE-balanced nnet model
+lines(roc_smote_nnet, col = "blue", lwd = 2)
+
+# Add the ROC curve for the tuned nnet model
+lines(roc_nnet_tuned, col = "green", lwd = 2)
+
+# Add a legend to the plot
+legend("bottomright", legend = c("Original nnet", "SMOTE nnet", "Tuned nnet"),
+       col = c("red", "blue", "green"), lwd = 2)
+
+
+```
+SMOTE balancing significantly improved the model's accuracy, addressing the issue of class imbalance effectively.
+Hyperparameter tuning further enhanced the model's ability to distinguish between classes, as indicated by the highest AUC.
+Overall, the hyperparameter-tuned nnet model, when combined with SMOTE, provided the best performance in terms of accuracy and AUC, making it the most effective approach for this classification task.
+
+Accuracy Comparison Table
+```{r}
+# Accuracy values 
+accuracy_nnet <- 0.01  
+accuracy_nnet_smote <- 0.91  
+accuracy_nnet_tuned <- 0.02  
+
+# Create a data frame for the comparison
+accuracy_comparison <- data.frame(
+  Model = c("Original nnet", "SMOTE nnet", "Tuned nnet"),
+  Accuracy = c(accuracy_nnet, accuracy_nnet_smote, accuracy_nnet_tuned)
+)
+
+# Print the comparison table
+print(accuracy_comparison)
+
+# Accuracy Comparison plot
+barplot(accuracy_comparison$Accuracy, names.arg = accuracy_comparison$Model,
+        col = c("red", "blue", "green"), ylim = c(0, 1),
+        main = "Accuracy Comparison of Models",
+        ylab = "Accuracy")
+
+```
+Balancing the dataset using SMOTE had the most significant impact on improving the model's accuracy, making it the best-performing approach among the three.
+
+While hyperparameter tuning can improve the model's AUC (as seen in previous plots), it did not significantly enhance accuracy, underscoring the importance of addressing class imbalance for this particular dataset.
+
+AUC Comparison Table
+```{r}
+# AUC values 
+auc_nnet <- 0.76  
+auc_nnet_smote <- 0.73  
+auc_nnet_tuned <- 0.93
+
+# Create a data frame for the AUC comparison
+auc_comparison <- data.frame(
+  Model = c("Original nnet", "SMOTE nnet", "Tuned nnet"),
+  AUC = c(auc_nnet, auc_nnet_smote, auc_nnet_tuned)
+)
+
+# Print the comparison table
+print(auc_comparison)
+
+# AUC Comparison plot
+barplot(auc_comparison$AUC, names.arg = auc_comparison$Model,
+        col = c("red", "blue", "green"), ylim = c(0, 1),
+        main = "AUC Comparison of Models",
+        ylab = "AUC")
+
+```
+Original nnet: The AUC is moderate, indicating that the original model has some ability to distinguish between the classes, but it is not optimal.
+
+SMOTE nnet: The AUC for the SMOTE-balanced model is slightly higher than the original, showing that balancing the dataset improved the model's ability to distinguish between the classes. However, the improvement in AUC is not as significant as the improvement in accuracy.
+
+Tuned nnet: The hyperparameter-tuned model has the highest AUC, suggesting that tuning the model parameters improved its ability to distinguish between the positive and negative classes, even more so than balancing the dataset with SMOT
+
+
+## Comparing the best nnet model to the neuralnet model
+
+Generate confusion matrix and accuracy for both models
+```{r}
+
+# For the best nnet model (tuned)
+predictions_best_nnet <- predict(nn_model_cv, dataTest[, -ncol(dataTest)])
+confusion_matrix_best_nnet <- table(predictions_best_nnet, dataTest$LUNG_CANCER)
+accuracy_best_nnet <- sum(diag(confusion_matrix_best_nnet)) / sum(confusion_matrix_best_nnet)
+
+# For the neuralnet model
+predictions_nn <- neuralnet::compute(nn, input_data)$net.result
+predicted_class_nn <- ifelse(predictions_nn > 0.5, 1, 0)
+confusion_matrix_nn <- table(predicted_class_nn, dataTest$LUNG_CANCER)
+accuracy_nn <- sum(diag(confusion_matrix_nn)) / sum(confusion_matrix_nn)
+
+# Print accuracy
+print(paste("Accuracy with best `nnet` model:", accuracy_best_nnet))
+print(paste("Accuracy with `neuralnet` model:", accuracy_nn))
+
+# Plot ROC Curves for both models
+roc_best_nnet <- roc(dataTest$LUNG_CANCER, as.numeric(predictions_best_nnet))
+roc_nn <- roc(dataTest$LUNG_CANCER, as.numeric(predicted_class_nn))
+
+plot(roc_best_nnet, main="Comparison of ROC Curves: Best `nnet` vs `neuralnet`", col="red")
+lines(roc_nn, col="blue")
+legend("bottomright", legend=c("Best nnet", "neuralnet"), col=c("red", "blue"), lwd=2)
+
+# Compare AUC values
+auc_best_nnet <- auc(roc_best_nnet)
+auc_nn <- auc(roc_nn)
+
+barplot(c(auc_best_nnet, auc_nn), names.arg=c("Best nnet", "neuralnet"), col=c("red", "blue"), main="AUC Comparison")
+
+```
+## Summary of Results
+
+In the context of lung cancer prediction:
+-False Positives: Predicting cancer when the patient does not have it (unnecessary anxiety and further testing).
+-False Negatives: Missing a cancer diagnosis (potentially severe health consequences).
+-Depending on the scenario, you might prioritize reducing false negatives or false positives.
+
+1. ROC Curves Comparison: The ROC curves for the best nnet model and the neuralnet model were compared. The best nnet model achieved a higher sensitivity and specificity than the neuralnet model, as evident from the ROC curve that lies closer to the top left corner of the plot. This suggests that the best nnet model has a superior ability to distinguish between positive and negative cases of lung cancer.
+
+2. AUC Comparison: The AUC (Area Under the Curve) comparison plot clearly shows that the best nnet model has a higher AUC compared to the neuralnet model. A higher AUC indicates better model performance in terms of distinguishing between classes. The best nnet model outperformed the neuralnet model in this aspect.
+
+3. Accuracy Comparison: The accuracy for the best nnet model was very low at approximately 2.17%, while the accuracy of the neuralnet model was significantly higher at around 90.22%. This indicates that despite the best nnet model showing better discrimination in the ROC and AUC metrics, its overall accuracy was poor. This discrepancy suggests that the best nnet model might be overfitting or is not well-calibrated for making accurate predictions on the test data, whereas the neuralnet model, despite having a lower AUC, might be making more correct predictions overall.
+
