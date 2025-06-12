@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\file_utils.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:file_utils.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config_loader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:config_loader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config_loader.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:config_loader.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\test_file_utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:test_file_utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\file_utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:file_utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{155680B1-A462-4393-B76C-83256CFE9CC4}|file_organizer.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-11T18:23:25.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "config.json",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config.json",
+              "RelativeDocumentMoniker": "config.json",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config.json",
+              "RelativeToolTip": "config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-11T18:23:12.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CMakeLists.txt",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\CMakeLists.txt",
+              "RelativeDocumentMoniker": "CMakeLists.txt",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\CMakeLists.txt",
+              "RelativeToolTip": "CMakeLists.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-11T18:22:55.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "test_file_utils.cpp",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\test_file_utils.cpp",
+              "RelativeDocumentMoniker": "test_file_utils.cpp",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\test_file_utils.cpp",
+              "RelativeToolTip": "test_file_utils.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T18:22:12.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "config_loader.hpp",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config_loader.hpp",
+              "RelativeDocumentMoniker": "config_loader.hpp",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config_loader.hpp",
+              "RelativeToolTip": "config_loader.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T18:21:41.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "config_loader.cpp",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config_loader.cpp",
+              "RelativeDocumentMoniker": "config_loader.cpp",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\config_loader.cpp",
+              "RelativeToolTip": "config_loader.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T18:20:57.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "file_utils.hpp",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\file_utils.hpp",
+              "RelativeDocumentMoniker": "file_utils.hpp",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\file_utils.hpp",
+              "RelativeToolTip": "file_utils.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T18:21:22.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "file_utils.cpp",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\file_utils.cpp",
+              "RelativeDocumentMoniker": "file_utils.cpp",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\file_utils.cpp",
+              "RelativeToolTip": "file_utils.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T18:20:49.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\bartl\\Desktop\\General-Projects\\file_organizer\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T18:20:23.861Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

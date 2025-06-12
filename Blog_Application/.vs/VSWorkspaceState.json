@@ -1,11 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\blog_site",
-    "\\blog_site\\blog",
-    "\\blog_site\\blog\\migrations",
-    "\\blog_site\\blog_site"
+    "\\project_root",
+    "\\project_root\\blog",
+    "\\project_root\\blog\\static\\blog\\css",
+    "\\project_root\\blog\\templates",
+    "\\project_root\\blog\\templates\\blog",
+    "\\project_root\\blog\\templates\\blog\\post",
+    "\\project_root\\blog_site"
   ],
-  "SelectedNode": "\\blog_site\\blog_site\\urls.py",
+  "SelectedNode": "\\project_root\\blog\\templates\\blog",
   "PreviewInSolutionExplorer": false
 }
