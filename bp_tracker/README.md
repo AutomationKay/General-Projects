@@ -72,10 +72,6 @@ This project is licensed under the MIT license
 
 
 
-### Clone the Repository
 
-```bash
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
  
 
