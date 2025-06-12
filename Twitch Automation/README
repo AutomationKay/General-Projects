@@ -1,9 +1,9 @@
-### Twitch Activity Automation
+# Twitch Activity Automation
 
 This Python script demonstrates automation of browser interactions through Google Chrome using pyautogui. It refreshes pages, switches tabs, moves the mouse randomly, clicks at specified coordinates, and types randomized emotes in a continuous loop. 
 
 
-## Features
+# Features
 Randomized delays between actions to simulate human behavior.
 
 Page refresh via hotkey (Ctrl+R).
