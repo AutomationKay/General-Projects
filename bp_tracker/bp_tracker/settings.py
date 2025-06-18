@@ -65,6 +65,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bp_tracker.urls'
 
+ALLOWED_HOSTS = ['https://bp-tracker-app.onrender.com', '127.0.0.1']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
