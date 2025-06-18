@@ -30,21 +30,27 @@ global_sex_avg = data.groupby('sex').agg({'systolic': 'mean', 'diastolic': 'mean
 def get_blood_pressure_range(sex, country):
     logger.debug(f"Fetching blood pressure range for sex: {sex}, country: {country}")
 
+    # Initializing a result dictionary 
+    result = {
+        'country': None,
+        'global': None,
+        'default': {
+            'systolic': [90, 120],
+            'diastolic': [60, 80]}
+        }
     # Check if country is available in the dataset
-    country_avg = country_sex_avg[(country_sex_avg['country'].str.lower() == country.lower()) & (country_sex_avg['sex'].str.lower() == sex.lower())]
+    country_avg = country_sex_avg[
+        (country_sex_avg['country'].str.lower() == country.lower()) &
+        (country_sex_avg['sex'].str.lower() == sex.lower())
+        ]
+
     if not country_avg.empty:
         avg_systolic = country_avg['systolic'].mean()
         avg_diastolic = country_avg['diastolic'].mean()
         logger.debug(f"Found country averages: systolic={avg_systolic}, diastolic={avg_diastolic}")
-        return {
-            'country': {
-                'systolic': [avg_systolic - 10, avg_systolic + 10],
-                'diastolic': [avg_diastolic - 10, avg_diastolic + 10]
-            },
-            'default': {
-                'systolic': [90, 120],
-                'diastolic': [60, 80]
-            }
+        result['country'] = {
+            'systolic': [avg_systolic - 10, avg_systolic + 10],
+            'diastolic': [avg_diastolic - 10, avg_diastolic + 10]
         }
     else:
         logger.debug(f"No country averages found for country: {country}, sex: {sex}")
@@ -55,21 +61,11 @@ def get_blood_pressure_range(sex, country):
         avg_systolic = global_avg['systolic'].mean()
         avg_diastolic = global_avg['diastolic'].mean()
         logger.debug(f"Found global averages: systolic={avg_systolic}, diastolic={avg_diastolic}")
-        return {
-            'global': {
-                'systolic': [avg_systolic - 10, avg_systolic + 10],
-                'diastolic': [avg_diastolic - 10, avg_diastolic + 10]
-            },
-            'default': {
-                'systolic': [90, 120],
-                'diastolic': [60, 80]
-            }
+        result['global'] = {
+            'systolic': [avg_systolic - 10, avg_systolic + 10],
+            'diastolic': [avg_diastolic - 10, avg_diastolic + 10]
+
         }
 
     logger.debug("Returning default averages")
-    return {
-        'default': {
-            'systolic': [90, 120],
-            'diastolic': [60, 80]
-        }
-    }
+    return result

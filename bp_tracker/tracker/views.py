@@ -15,6 +15,9 @@ from .blood_pressure_data import get_blood_pressure_range  # For getting blood p
 import logging # For tracking and debugging issues
 import joblib # For loading the trained model
 import os # For getting the trained model location
+from django.template import loader # for debugging
+from django.http import HttpResponse # for debugging
+
 
 
 # Setting up logging 
@@ -26,13 +29,31 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Counstruct path for model and encoder
 model_path = os.path.join(BASE_DIR, 'models', 'bp_model.pkl')
-encoder_path = os.path.join(BASE_DIR, 'models', 'label_encoder.pkl')
+preprocessor_path = os.path.join(BASE_DIR, 'models', 'preprocessor.pkl')
+print(f"Django is loading model from: {os.path.abspath(model_path)}") # For debugging
 
 # Loading the trained model
 model = joblib.load(model_path)
-encoder = joblib.load(encoder_path)
+preprocessor = joblib.load(preprocessor_path)
 
 def home(request):
+    #  # --- TEMPORARY DEBUGGING CODE ---
+    # from django.conf import settings
+    # template_dirs = []
+    # for engine in settings.TEMPLATES:
+    #     if 'DIRS' in engine:
+    #         template_dirs.extend(engine['DIRS'])
+
+    # debug_message = "<h1>Template Debug Information</h1>"
+    # debug_message += "<p>Django is configured to look for templates in the following 'DIRS':</p>"
+    # debug_message += "<ul>"
+    # for d in template_dirs:
+    #     debug_message += f"<li>{d}</li>"
+    # debug_message += "</ul>"
+
+    # return HttpResponse(debug_message)
+    # # --- END OF DEBUGGING CODE ---
+
     return render(request, 'tracker/home.html')
 
 @login_required
@@ -51,15 +72,18 @@ def log_reading(request):
             send_notifications_if_needed(reading)
             
             # Prepare the data for prediction
-            user_data = pd.DataFrame({
+            user_data_raw = pd.DataFrame({
                 'systolic' : [reading.systolic],
                 'diastolic' : [reading.diastolic],
                 'sex' : [0 if reading.sex == 'male' else 1],
-                'country': [encoder.transform([reading.country])[0]]
+                'country': [reading.country]
             })
+
+            # Transform the raw data using the preprocessor
+            user_data_processed = preprocessor.transform(user_data_raw)
             
             # Make prediction
-            prediction = model.predict(user_data)
+            prediction = model.predict(user_data_processed)
             prediction_text = "High blood pressure risk" if prediction[0] else "Normal blood pressure"
 
             # Fetch blood pressure range based on the input
@@ -175,6 +199,7 @@ def view_comparisons(request):
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     df.set_index('timestamp', inplace=True)
     
+    plt.style.use('seaborn-v0_8-whitegrid') 
     plt.figure(figsize=(10, 6))
     plt.plot(df.index, df['systolic'], label='Systolic')
     plt.plot(df.index, df['diastolic'], label='Diastolic')
@@ -260,16 +285,3 @@ def test_email(request):
         ['automationkay@gmail.com'],
     )
     return HttpResponse("Email sent!")
-
-def update_dataset_with_new_reading(reading):
-    data = pd.read_csv('data/bp_standardised_cleaned.csv')
-    new_row = {
-        'country': reading.country,
-        'sex': 'male' if reading.sex == 0 else 'female',
-        'Year': pd.Timestamp.now().year,
-        'systolic': reading.systolic,
-        'diastolic': reading.diastolic,
-        'Prevalence of raised blood pressure': None
-    }
-    data = data.append(new_row, ignore_index=True)
-    data.to_csv('data/bp_standardised_cleaned.csv', index=False)

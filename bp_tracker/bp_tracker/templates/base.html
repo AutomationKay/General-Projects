@@ -1,13 +1,21 @@
-<!DOCTYPE html>
+{% load static %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Blood Pressure Tracker{% endblock %}</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     {% block extra_head %}{% endblock %}
 </head>
 <body>
@@ -19,18 +27,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'log_reading' %}">Log a Reading</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'view_averages_and_trends' %}">View Averages and Trends</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'view_comparisons' %}">View Comparisons</a></li>
-                    <li class="nav-item">
-                        <form method="post" action="{% url 'account_logout' %}" style="display: inline;">
-                            {% csrf_token %}
-                            <button type="submit" class="nav-link btn btn-link" style="display: inline; cursor: pointer;">Logout</button>
-                        </form>
-                    </li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'log_reading' %}">Log a Reading</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'view_averages_and_trends' %}">View Averages and Trends</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'view_comparisons' %}">View Comparisons</a></li>
+                <li class="nav-item">
+                    <form method="post" action="{% url 'account_logout' %}" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="nav-link btn btn-link" style="display: inline; cursor: pointer;">Logout</button>
+                    </form>
+                </li>
                 {% else %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
                 {% endif %}
             </ul>
         </div>

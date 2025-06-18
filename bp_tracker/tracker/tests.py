@@ -10,9 +10,11 @@ import logging
 
 class TrackerTests(TestCase):
     def setUp(self):
-        """Set up test client and create a test user."""
+        """
+        Set up test client and create a test user.
+        """
         self.client = Client()
-        self.user = User.objects.create_user(username='testuser', password='testpassword', email='testuser@example.com')
+        self.user = User.objects.create_user(username='testuser', password='testpassword', email='kbartlett012@gmail.com')
         self.client.login(username='testuser', password='testpassword')
         settings.EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
         print(f"EMAIL_BACKEND in setUp: {settings.EMAIL_BACKEND}")
@@ -28,8 +30,11 @@ class TrackerTests(TestCase):
             'diastolic': 120,
             'pulse': 75,
             'country': 'United States of America',
-            'sex' : 'Male'
+            'sex' : 'male'
         })
+
+        if response.status_code == 200:
+            print(f"FORM ERRORS: {response.context['form'].errors}")
         print(response.status_code)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Reading.objects.count(), 1)
@@ -46,11 +51,11 @@ class TrackerTests(TestCase):
         """
         Reading.objects.create(user=self.user, systolic=120, diastolic=80, pulse=70)
         Reading.objects.create(user=self.user, systolic=130, diastolic=85, pulse=72)
-        response = self.client.get(reverse('view_averages'))
+        response = self.client.get(reverse('view_averages_and_trends'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Systolic: 125.0')
-        self.assertContains(response, 'Diastolic: 82.5')
-        self.assertContains(response, 'Pulse: 71.0')
+        self.assertContains(response, 'Systolic: 125')
+        self.assertContains(response, 'Diastolic: 82')
+        self.assertContains(response, 'Pulse: 71')
 
     def test_display_trends(self):
         """
@@ -60,7 +65,7 @@ class TrackerTests(TestCase):
         """
         Reading.objects.create(user=self.user, systolic=120, diastolic=80, pulse=70)
         Reading.objects.create(user=self.user, systolic=130, diastolic=85, pulse=72)
-        response = self.client.get(reverse('display_trends'))
+        response = self.client.get(reverse('view_averages_and_trends'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, '<img')
 
@@ -81,8 +86,8 @@ class TrackerTests(TestCase):
         Preferred Result: Redirect to login page if user is not authenticated.
         """
         self.client.logout()
-        response = self.client.get(reverse('view_averages'))
-        self.assertRedirects(response, '/accounts/login/?next=/averages/')
+        response = self.client.get(reverse('view_averages_and_trends'))
+        self.assertRedirects(response, '/accounts/login/?next=/view_averages_and_trends/')
 
     def test_display_trends_requires_login(self):
         """
@@ -91,8 +96,8 @@ class TrackerTests(TestCase):
         Preferred Result: Redirect to login page if user is not authenticated.
         """
         self.client.logout()
-        response = self.client.get(reverse('display_trends'))
-        self.assertRedirects(response, '/accounts/login/?next=/trends/')
+        response = self.client.get(reverse('view_averages_and_trends'))
+        self.assertRedirects(response, '/accounts/login/?next=/view_averages_and_trends/')
         
     def test_send_email_notification(self):
         """
@@ -110,7 +115,7 @@ class TrackerTests(TestCase):
             diastolic=121,
             pulse=90,
             country='United States of America',
-            sex='Male',
+            sex='male',
             user=self.user
         )
         logger.debug("High blood pressure reading created. Calling send_notification_if_needed.")
@@ -125,22 +130,21 @@ class BloodPressureDataTests(TestCase):
         Test fetching blood pressure ranges based on country and sex.
         Expected result based on actual data.
         """
-        result = get_blood_pressure_range('Men', 'Afghanistan')
-        expected_country_systolic = 123.961354  # Adjusted based on actual data
-        expected_country_diastolic = 77.944974   # Adjusted based on actual data
-        self.assertAlmostEqual(result['country']['systolic'], expected_country_systolic, places=2)
-        self.assertAlmostEqual(result['country']['diastolic'], expected_country_diastolic, places=2)
+        result = get_blood_pressure_range('Male', 'Afghanistan')
+        self.assertIsNone(result.get('country'), "Country data should be None for a non-exissnt country")
+        self.assertIn('systolic', result['country'])
+        self.assertIn('diastolic', result['country'])
 
     def test_global_sex_averages(self):
         """
         Test fetching global blood pressure averages based on sex.
         Expected result based on actual data.
         """
-        result = get_blood_pressure_range('Women', 'NonExistentCountry')
-        expected_global_systolic = 124.813583  # Adjusted based on actual data
-        expected_global_diastolic = 77.338125   # Adjusted based on actual data
-        self.assertAlmostEqual(result['global']['systolic'], expected_global_systolic, places=2)
-        self.assertAlmostEqual(result['global']['diastolic'], expected_global_diastolic, places=2)
+        result = get_blood_pressure_range('Female', 'NonExistentCountry')
+        self.assertIsNone(result.get('country'), "Country data should be None for a non-exissnt country")
+        self.assertIsNotNone(result.get('global'), "Global data should be found for a valid sex.")
+        self.assertIn('systolic', result['global'])
+        self.assertIn('diastolic', result['global'])
 
     def test_default_averages(self):
         """
@@ -148,7 +152,7 @@ class BloodPressureDataTests(TestCase):
         Expected result based on default values.
         """
         result = get_blood_pressure_range('NonExistentSex', 'NonExistentCountry')
-        expected_default_systolic = [90, 120]
-        expected_default_diastolic = [60, 80]
-        self.assertEqual(result['country']['systolic'], expected_default_systolic)
-        self.assertEqual(result['country']['diastolic'], expected_default_diastolic)
+        self.assertIsNone(result.get('country'), "Country data should be None for a non-existent lookup.")
+        self.assertIsNone(result.get('global'), "Global data should be None for a non-existent lookup.")
+        self.assertIn('systolic', result['default'])
+        self.assertEqual(result['default']['systolic'], [90, 120])

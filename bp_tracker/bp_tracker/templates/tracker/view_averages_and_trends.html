@@ -3,13 +3,23 @@
 {% block title %}Averages and Trends{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
     <h2>Average Readings</h2>
-    <p>Systolic: {{ averages.systolic__avg }}</p>
-    <p>Diastolic: {{ averages.diastolic__avg }}</p>
-    <p>Pulse: {{ averages.pulse__avg }}</p>
 
-    <h2>Trends</h2>
-    <img src="data:image/png;base64,{{ image }}" alt="Trends Graph" />
+<div class="stats-container">
+    <div class="stat-card">
+        <span class="stat-label">Systolic</span>
+        <span class="stat-value">{{ averages.systolic__avg }}</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">Diastolic</span>
+        <span class="stat-value">{{ averages.diastolic__avg }}</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">Pulse</span>
+        <span class="stat-value">{{ averages.pulse__avg }}</span>
+    </div>
 </div>
+
+<h2>Trends</h2>
+<img class="img-fluid" src="data:image/png;base64,{{ image }}" alt="Blood Pressure Trends">
 {% endblock %}

@@ -2,5 +2,5 @@
 Django==5.0.7
 pandas
 matplotlib
-scikit-learn
+scikit-learn 1.2.2
 python-decouple

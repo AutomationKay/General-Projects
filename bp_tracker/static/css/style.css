@@ -1,0 +1,90 @@
+/* static/css/style.css */
+
+body {
+    /* Inter font */
+    font-family: 'Inter', sans-serif;
+    /* off-white background for the whole page */
+    background-color: #f4f7f6;
+}
+
+/* targets the <div class="container mt-5"> from base.html */
+.container {
+    background-color: #ffffff; /* White background for the content area */
+    padding: 40px;
+    border-radius: 8px; /* Softer, rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* A subtle shadow for depth */
+}
+.main-content-box { /* Give this class to your gray container div */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px; /* Softer, rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Style for text inputs and select dropdowns */
+input[type="text"],
+input[type="number"], /* It's good practice to use type="number" for numeric fields */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Important for padding and width to work together */
+    font-size: 16px;
+    transition: border-color 0.3s; /* Smooth transition on focus */
+}
+
+    /* Change border color when the user clicks into the field */
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+        border-color: #007bff; /* A primary blue, matching your button */
+        outline: none; /* Removes the default browser outline */
+    }
+
+/* Style for the submit button */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px; /* Space between the cards */
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1; /* Makes all cards take up equal space */
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: #6c757d; /* Muted text color */
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #343a40;
+}
