@@ -22,5 +22,5 @@ def save_season_data(year: int):
     print (f"[{datetime.now()}] Saved player and team data for {year}")
 
 if __name__ == "__main__":
-    for year in range(2010, 2025):
+    for year in range(2020, 2025):
         save_season_data(year)

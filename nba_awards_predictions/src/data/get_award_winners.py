@@ -104,7 +104,7 @@ def get_award_history(start_year: int, end_year: int) -> dict:
     return award_history
 
 if __name__ == "__main__":
-    history = get_award_history(2022, 2025)
+    history = get_award_history(2010, 2025)
     with open("data/awards/award_winners.json", "w") as f:
         json.dump(history, f, indent=4)
     

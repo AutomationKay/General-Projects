@@ -1,13 +1,25 @@
 #src/data/scrape.py
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 import pandas as pd
 from get_award_winners import get_awards
+from io import StringIO
+import time
 import os
 
 
-def fetch_table(url: str, table_id: str) ->pd.DataFrame:
+# Configuring session and headers to avoid 429 rate-limiting
+session = requests.Session()
+headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                       "Chrome/114.0.0.0 Safari/537.36"
+}
+session.headers.update(headers)
+    
+
+def fetch_table(url: str, table_id: str, pause: float = 6.0) ->pd.DataFrame:
     """
     Helper function to fetch a table from Basketball Reference then return a DataFrame
 
@@ -18,17 +30,35 @@ def fetch_table(url: str, table_id: str) ->pd.DataFrame:
     Returns:
         pd.DataFrame: A dataframe containing a layout to be filled with data for players and teams
     """
+    print(f"Fetching table: {url} [{table_id}]")
+    response = session.get(url)
+    time.sleep(pause)
     
-    response = requests.get(url)
     if not response.ok:
         raise Exception(f"Failed to fetch data from {url}, status code {response.status_code}")
     
     soup = BeautifulSoup(response.content, 'html.parser')
-    table = soup.find(name="table", attrs={"id: table_id"})
-    df = pd.read_html(str(table))[0]
-    df = df[df["Player"] != "Player"] # To remove repeated header rows
-    df.reset_index(drop=True, inplace=True)
-    return df
+    
+    # Attempt to find regular table
+    table = soup.find(name="table", attrs={"id": table_id})
+    
+    if table:
+        return pd.read_html(StringIO(str(table)))[0]
+
+    # Otherwise, search in comment blocks
+    comments = soup.find_all(string=lambda text: isinstance(text, Comment))
+    for comment in comments:
+        if table_id in comment:
+            try:
+                comment_soup = BeautifulSoup(comment, "html.parser")
+                table = comment_soup.find("table", attrs={"id": table_id})
+                if table:
+                    return pd.read_html(StringIO(str(table)))[0]
+            except Exception as e:
+                print(f"Failed to parse table in comment: {e}")
+
+    raise ValueError(f"Table with id={table_id} not found (including comments)")
+
 
 def scrape_combined_stats(year: int) -> pd.DataFrame:
     """
@@ -84,9 +114,14 @@ def scrape_combined_team_stats(year: int) -> pd.DataFrame:
     """
    
     url = f"https://www.basketball-reference.com/leagues/NBA_{year}.html"
-    response = requests.get(url)
+    
+    print(f"Fetching team stats: {url}")
+    response = session.get(url)
+    time.sleep(3)
+    
     if not response.ok:
         raise Exception(f"Failed to fetch team data for {year}")
+    
     soup = BeautifulSoup(response.content, "html.parser")
     
     # Per-game team stats
