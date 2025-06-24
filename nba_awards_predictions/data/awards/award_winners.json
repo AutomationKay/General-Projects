@@ -1,82 +1,82 @@
 {
     "2010": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "LeBron James",
+        "DPOY": "Dwight Howard",
         "PPG Leader": "Kevin Durant"
     },
     "2011": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Derrick Rose",
+        "DPOY": "Dwight Howard",
         "PPG Leader": "Kevin Durant"
     },
     "2012": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "LeBron James",
+        "DPOY": "Tyson Chandler",
         "PPG Leader": "Kevin Durant"
     },
     "2013": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "LeBron James",
+        "DPOY": "Marc Gasol",
         "PPG Leader": "Carmelo Anthony"
     },
     "2014": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Kevin Durant",
+        "DPOY": "Joakim Noah",
         "PPG Leader": "Kevin Durant"
     },
     "2015": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Stephen Curry",
+        "DPOY": "Kawhi Leonard",
         "PPG Leader": "Russell Westbrook"
     },
     "2016": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Stephen Curry",
+        "DPOY": "Kawhi Leonard",
         "PPG Leader": "Stephen Curry"
     },
     "2017": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Russell Westbrook",
+        "DPOY": "Draymond Green",
         "PPG Leader": "Russell Westbrook"
     },
     "2018": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "James Harden",
+        "DPOY": "Rudy Gobert",
         "PPG Leader": "James Harden"
     },
     "2019": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Giannis Antetokounmpo",
+        "DPOY": "Rudy Gobert",
         "PPG Leader": "James Harden"
     },
     "2020": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Giannis Antetokounmpo",
+        "DPOY": "Giannis Antetokounmpo",
         "PPG Leader": "James Harden"
     },
     "2021": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Nikola Jokić",
+        "DPOY": "Rudy Gobert",
         "PPG Leader": "Stephen Curry"
     },
     "2022": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Nikola Jokić",
+        "DPOY": "Marcus Smart",
         "PPG Leader": "Joel Embiid"
     },
     "2023": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Joel Embiid",
+        "DPOY": "Jaren Jackson Jr.",
         "PPG Leader": "Joel Embiid"
     },
     "2024": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Nikola Jokić",
+        "DPOY": "Rudy Gobert",
         "PPG Leader": "Joel Embiid"
     },
     "2025": {
-        "MVP": null,
-        "DPOY": null,
+        "MVP": "Shai Gilgeous-Alexander",
+        "DPOY": "Evan Mobley",
         "PPG Leader": "Shai Gilgeous-Alexander"
     }
 }

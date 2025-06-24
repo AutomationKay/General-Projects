@@ -4,6 +4,7 @@ from scrape import scrape_combined_stats, scrape_combined_team_stats
 import os
 import pandas as pd
 from datetime import datetime
+import time
 
 RAW_DATA_PATH = "data/raw"
 TEAM_DATA_PATH = "data/teams"
@@ -22,5 +23,6 @@ def save_season_data(year: int):
     print (f"[{datetime.now()}] Saved player and team data for {year}")
 
 if __name__ == "__main__":
-    for year in range(2010, 2025):
+    current_year = time.localtime().tm_year
+    for year in range(2010, current_year):
         save_season_data(year)
