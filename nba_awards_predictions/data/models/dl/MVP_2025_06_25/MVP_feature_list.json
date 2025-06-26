@@ -1,0 +1,16 @@
+{
+    "timestamp": "2025_06_25",
+    "input_dim": 8,
+    "features": [
+        "VORP",
+        "FT",
+        "TOV",
+        "AST",
+        "DRB",
+        "PER",
+        "AST%",
+        "USG%"
+    ],
+    "threshold": 7.0,
+    "notes": "Deep learning DPOY model trained on all-season data"
+}
