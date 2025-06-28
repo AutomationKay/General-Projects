@@ -19,7 +19,7 @@ def run_notebook(path, timeout=600):
             nb = nbformat.read(f, as_version=4)
             ep = ExecutePreprocessor(timeout=timeout, kernel_name='python3')
             ep.preprocess(nb, {'metadata': {'path': os.path.dirname(path)}})
-        logger.info(f"✅ Successfully ran notebook: {path}")
+        logger.info(f" Successfully ran notebook: {path}")
     except Exception as e:
         logger.error(f"Failed to run notebook {path}")
         logger.error(traceback.format_exc())

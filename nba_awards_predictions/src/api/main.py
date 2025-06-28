@@ -4,7 +4,8 @@ import os
 import torch
 import joblib
 import json
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
+from src.api.security import verify_api_key
 from src.api.schemas import PlayerStats, TeamStats, PredictionResponse
 from src.api.model_definition import NBAAwardNet
 import numpy as np
@@ -116,7 +117,7 @@ def get_versions():
     }
 
 @app.post("/predict/mvp", response_model=PredictionResponse)
-def predict_mvp(player: PlayerStats):
+def predict_mvp(player: PlayerStats, _: str = Depends(verify_api_key)):
     try:
         input_tensor = preprocess_input(player.dict(), mvp_features, mvp_scaler)
         with torch.no_grad():
@@ -126,7 +127,7 @@ def predict_mvp(player: PlayerStats):
         return {"error": str(e)}
 
 @app.post("/predict/dpoy", response_model=PredictionResponse)
-def predict_dpoy(player: PlayerStats):
+def predict_dpoy(player: PlayerStats, _: str = Depends(verify_api_key)):
     try:
         input_tensor = preprocess_input(player.dict(), dpoy_features, dpoy_scaler)
         with torch.no_grad():
@@ -136,7 +137,7 @@ def predict_dpoy(player: PlayerStats):
         return {"error": str(e)}
 
 @app.post("/predict/ppg_leader", response_model=PredictionResponse)
-def predict_ppg_leader(player: PlayerStats):
+def predict_ppg_leader(player: PlayerStats, _: str = Depends(verify_api_key)):
     try:
         input_tensor = preprocess_input(player.dict(), ppg_features, ppg_scaler)
         with torch.no_grad():
@@ -146,7 +147,7 @@ def predict_ppg_leader(player: PlayerStats):
         return {"error": str(e)}
 
 @app.post("/predict/team", response_model=PredictionResponse)
-def predict_team(team: TeamStats):
+def predict_team(team: TeamStats, _: str = Depends(verify_api_key)):
     try:
         input_tensor = preprocess_input(team.dict(), team_features, team_scaler)
         with torch.no_grad():

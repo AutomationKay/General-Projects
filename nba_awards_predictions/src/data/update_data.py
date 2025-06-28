@@ -13,12 +13,12 @@ def save_season_data(year: int):
     # Player stats
     player_df = scrape_combined_stats(year)
     os.makedirs(RAW_DATA_PATH, exist_ok=True)
-    player_df.to_csv(f"{RAW_DATA_PATH}/nba_combined_stats_{year}.csv", index=False)
+    player_df.to_csv(f"{RAW_DATA_PATH}/nba_combined_stats_{year}.csv", index=False, encoding="utf-8")
     
     # Team stats
     team_df = scrape_combined_team_stats(year)
     os.makedirs(TEAM_DATA_PATH, exist_ok=True)
-    team_df.to_csv(f"{TEAM_DATA_PATH}/team_combined_stats_{year}.csv", index=False)
+    team_df.to_csv(f"{TEAM_DATA_PATH}/team_combined_stats_{year}.csv", index=False, encoding="utf-8")
     
     print (f"[{datetime.now()}] Saved player and team data for {year}")
 
