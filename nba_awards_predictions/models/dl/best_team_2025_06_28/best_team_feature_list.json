@@ -1,0 +1,19 @@
+{
+    "timestamp": "2025_06_28",
+    "input_dim": 11,
+    "features": [
+        "MOV",
+        "3P%",
+        "DRB",
+        "FG%",
+        "ORtg",
+        "BLK",
+        "AST",
+        "FG",
+        "PTS",
+        "3P",
+        "DRB%"
+    ],
+    "threshold": 7.0,
+    "notes": "Deep learning Best Team prediction model trained on all-season data"
+}

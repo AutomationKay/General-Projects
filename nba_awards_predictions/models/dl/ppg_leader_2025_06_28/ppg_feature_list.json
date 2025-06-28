@@ -1,0 +1,16 @@
+{
+    "timestamp": "2025_06_28",
+    "input_dim": 8,
+    "features": [
+        "VORP",
+        "FT",
+        "WS",
+        "TOV",
+        "FG",
+        "USG%",
+        "2P",
+        "3P"
+    ],
+    "threshold": 7.0,
+    "notes": "Deep learning PPG Leader model trained on all-season data"
+}
