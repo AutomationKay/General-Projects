@@ -90,13 +90,13 @@ def scrape_combined_stats(year: int) -> pd.DataFrame:
         per_game_df.rename(columns={"PTS": "PPG"}, inplace=True)
 
     # DEBUGGING
-    print("\n\n--- Per Game DF Info ---")
-    print(per_game_df.columns)
-    print(per_game_df.head(3))
+    # print("\n\n--- Per Game DF Info ---")
+    # print(per_game_df.columns)
+    # print(per_game_df.head(3))
 
-    print("\n--- Advanced DF Info ---")
-    print(advanced_df.columns)
-    print(advanced_df.head(3))
+    # print("\n--- Advanced DF Info ---")
+    # print(advanced_df.columns)
+    # print(advanced_df.head(3))
 
     # Dropping columns from advanced table due to redundancy
     cols_to_drop = ["G", "GS", "MP"]

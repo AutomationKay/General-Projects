@@ -132,6 +132,6 @@ def get_award_history(start_year: int, end_year: int) -> dict:
 if __name__ == "__main__":
     current_year = time.localtime().tm_year
     history = get_award_history(2010, current_year)
-    with open("data/awards/award_winners.json", "w") as f:
+    with open("data/awards/award_winners.json", "w", encoding="utf-8") as f:
         json.dump(history, f, indent=4, ensure_ascii=False)
     print("\nAward history has been saved to data/awards/award_winners.json")

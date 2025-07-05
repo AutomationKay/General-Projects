@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: nba-awards-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
+      - key: API_SECRET_KEY
+        value: "ASDO@#(%)!"
+    plan: free
