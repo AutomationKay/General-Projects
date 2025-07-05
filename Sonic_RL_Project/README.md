@@ -1,4 +1,5 @@
-# Sonic Reinforcement Learning Project
+# Sonic Reinforcement Learning Project 
+![Sonic Gameplay](images/sonic_logo.png)
 
 The purpose of this project is to train a reinforcement learning agent to play **Sonic the Hedgehog 3** using `openai gymnasium`, the `gym-retro` environment, and the `Stable-Baselines3` library with the PPO algorithm.
 
@@ -97,3 +98,4 @@ pip install -r requirements.txt
 
 ## Now Play
 Enjoy watching Sonic get smarter!
+![Sonic Gameplay](images/sonic_running.gif)
