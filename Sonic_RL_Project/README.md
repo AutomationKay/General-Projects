@@ -1,6 +1,6 @@
 # Sonic Reinforcement Learning Project
 
-Train a reinforcement learning agent to play **Sonic the Hedgehog 3** using `openai gymnasium`, the `gym-retro` environment, and the `Stable-Baselines3` library with the PPO algorithm.
+The purpose of this project is to train a reinforcement learning agent to play **Sonic the Hedgehog 3** using `openai gymnasium`, the `gym-retro` environment, and the `Stable-Baselines3` library with the PPO algorithm.
 
 ---
 
@@ -24,7 +24,7 @@ sonic_rl_project/
 
 ---
 
-## 🚀 How Everything Connects
+## How Everything Connects
 
 - `train.py`: Main script that:
   - Imports `make_env()` from `envs/sonic_env.py`
@@ -43,6 +43,8 @@ sonic_rl_project/
   - Resize frames to (84, 84)
   - Convert to grayscale
   - Stack last 4 frames
+
+- `logger.py`: Custom logger for debugging and gathering info.
 
 ---
 
