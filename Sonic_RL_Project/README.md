@@ -1,5 +1,5 @@
 # Sonic Reinforcement Learning Project 
-![Sonic Gameplay](images/sonic_logo.png)
+![Sonic Gameplay](images/sonic_logo.gif)
 
 The purpose of this project is to train a reinforcement learning agent to play **Sonic the Hedgehog 3** using `openai gymnasium`, the `gym-retro` environment, and the `Stable-Baselines3` library with the PPO algorithm.
 
@@ -11,6 +11,7 @@ The purpose of this project is to train a reinforcement learning agent to play *
 sonic_rl_project/
 ├── envs/
 │   └── sonic_env.py        # Loads and wraps the Sonic environment
+├── images/                 # Images for markdown and screenshots of the training process
 ├── logs/                   # TensorBoard logs
 ├── models/                 # Saved model and model checkpoints
 ├── scripts/
