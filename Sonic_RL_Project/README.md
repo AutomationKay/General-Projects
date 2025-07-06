@@ -1,7 +1,7 @@
 # Sonic Reinforcement Learning Project 
 ![Sonic Gameplay](images/sonic_logo.gif)
 
-The purpose of this project is to train a reinforcement learning agent to play **Sonic the Hedgehog 3** using `openai gymnasium`, the `gym-retro` environment, and the `Stable-Baselines3` library with the PPO algorithm.
+The purpose of this project is to train a reinforcement learning agent to play **Sonic the Hedgehog 3** using `openai gymnasium`, the `stable-retro` environment, and the `Stable-Baselines3` library with the PPO algorithm.
 
 ---
 
@@ -77,7 +77,7 @@ This will open a browser where you can view:
      import retro
      retro.import_roms("path/to/rom_directory")
      ```
-  3. After importing, the ROM will be available to `gym-retro`.
+  3. After importing, the ROM will be available to `stable-retro`.
 
 ---
 
@@ -85,7 +85,7 @@ This will open a browser where you can view:
 
 - Python 3.8+
 - `gymnasium`
-- `gym-retro`
+- `stable-retro`
 - `stable-baselines3`
 - `pygame` (for rendering)
 - `tensorboard`
