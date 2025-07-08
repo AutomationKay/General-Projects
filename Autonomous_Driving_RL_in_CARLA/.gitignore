@@ -1,0 +1,8 @@
+CARLA/
+*.exe
+*.pak
+*.log
+__pycache__/
+*.pyc
+saved_models/*.pt
+carla-venv/
