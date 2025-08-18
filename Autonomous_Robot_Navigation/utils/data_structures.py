@@ -39,4 +39,18 @@ class RobotState:
     person_lost_count: int
     last_sensor_data: Optional[SensorData]
     last_motor_command: Optional[MotorCommand]
+
+@dataclass
+class LineData:
+    """
+    Data structure for line detection results
+    
+    """
+    timestamp: float
+    line_detected: bool
+    line_center_x: Optional[int]
+    line_angle: Optional[float]
+    line_width: Optional[int]
+    confidence: float
+    contour_area: Optional[float]
     

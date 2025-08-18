@@ -1,0 +1,4248 @@
+{
+  "session_info": {
+    "name": "person_following_session",
+    "start_time": "2025-08-17T16:15:31.993515",
+    "end_time": "2025-08-17T16:16:53.517910"
+  },
+  "sensor_data": [
+    {
+      "timestamp": 1755461732.32829,
+      "ultrasonic_distance": 51.143693923950195,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461732.95307,
+      "ultrasonic_distance": 57.34243392944336,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461733.3276284,
+      "ultrasonic_distance": 2.4083495140075684,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461733.6991944,
+      "ultrasonic_distance": 2.45741605758667,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461734.0737073,
+      "ultrasonic_distance": 2.4615049362182617,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461734.4432755,
+      "ultrasonic_distance": 2.41243839263916,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461734.8202932,
+      "ultrasonic_distance": 43.885934352874756,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461735.1994843,
+      "ultrasonic_distance": 49.48769807815552,
+      "person_detected": true,
+      "person_bbox": 461,
+      "confidence": 0.8753051161766052
+    },
+    {
+      "timestamp": 1755461735.4371204,
+      "ultrasonic_distance": 45.26797533035278,
+      "person_detected": true,
+      "person_bbox": 501,
+      "confidence": 0.9321351647377014
+    },
+    {
+      "timestamp": 1755461735.6778817,
+      "ultrasonic_distance": 48.113834857940674,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461735.916212,
+      "ultrasonic_distance": 37.71172761917114,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461736.1571894,
+      "ultrasonic_distance": 46.907615661621094,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461736.3989563,
+      "ultrasonic_distance": 49.90885257720947,
+      "person_detected": true,
+      "person_bbox": 31,
+      "confidence": 0.84917813539505
+    },
+    {
+      "timestamp": 1755461736.6395001,
+      "ultrasonic_distance": 50.824761390686035,
+      "person_detected": true,
+      "person_bbox": 262,
+      "confidence": 0.891880214214325
+    },
+    {
+      "timestamp": 1755461736.8719416,
+      "ultrasonic_distance": 2.7518153190612793,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461737.1102655,
+      "ultrasonic_distance": 3.1320810317993164,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461737.5594485,
+      "ultrasonic_distance": 999.0,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461737.7949324,
+      "ultrasonic_distance": 5.045676231384277,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461738.029147,
+      "ultrasonic_distance": 5.017054080963135,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461738.2645135,
+      "ultrasonic_distance": 10.021841526031494,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461738.4992783,
+      "ultrasonic_distance": 11.395704746246338,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461738.8032284,
+      "ultrasonic_distance": 14.568674564361572,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461739.0412264,
+      "ultrasonic_distance": 9.657931327819824,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461739.283955,
+      "ultrasonic_distance": 57.2729229927063,
+      "person_detected": true,
+      "person_bbox": 148,
+      "confidence": 0.8673379421234131
+    },
+    {
+      "timestamp": 1755461739.5922737,
+      "ultrasonic_distance": 69.75626945495605,
+      "person_detected": true,
+      "person_bbox": 257,
+      "confidence": 0.8468939065933228
+    },
+    {
+      "timestamp": 1755461739.83656,
+      "ultrasonic_distance": 72.93332815170288,
+      "person_detected": true,
+      "person_bbox": 319,
+      "confidence": 0.5334271788597107
+    },
+    {
+      "timestamp": 1755461740.0756533,
+      "ultrasonic_distance": 45.27615308761597,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461740.3127115,
+      "ultrasonic_distance": 25.931668281555176,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461740.5488315,
+      "ultrasonic_distance": 24.790871143341064,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461740.78585,
+      "ultrasonic_distance": 24.819493293762207,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461741.0232847,
+      "ultrasonic_distance": 24.80313777923584,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461741.2612364,
+      "ultrasonic_distance": 38.128793239593506,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461741.4993153,
+      "ultrasonic_distance": 38.22692632675171,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461741.7368855,
+      "ultrasonic_distance": 38.16150426864624,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461741.974292,
+      "ultrasonic_distance": 38.21057081222534,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461742.2139702,
+      "ultrasonic_distance": 42.07864999771118,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461742.460027,
+      "ultrasonic_distance": 66.2929892539978,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461742.6963687,
+      "ultrasonic_distance": 4.354655742645264,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461742.9993098,
+      "ultrasonic_distance": 6.022918224334717,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461743.2335696,
+      "ultrasonic_distance": 8.660244941711426,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461743.4745576,
+      "ultrasonic_distance": 37.969326972961426,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461743.7127764,
+      "ultrasonic_distance": 27.129709720611572,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461743.95528,
+      "ultrasonic_distance": 62.249088287353516,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461744.1993597,
+      "ultrasonic_distance": 63.19361925125122,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461744.4354887,
+      "ultrasonic_distance": 23.658251762390137,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461744.6808152,
+      "ultrasonic_distance": 67.5891637802124,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461744.9247591,
+      "ultrasonic_distance": 62.952375411987305,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461745.1666813,
+      "ultrasonic_distance": 55.236661434173584,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461745.4101593,
+      "ultrasonic_distance": 59.378695487976074,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461745.6539724,
+      "ultrasonic_distance": 59.243762493133545,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461745.8982835,
+      "ultrasonic_distance": 72.81475067138672,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461746.1404662,
+      "ultrasonic_distance": 57.54278898239136,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461746.3838272,
+      "ultrasonic_distance": 64.43663835525513,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461746.6252348,
+      "ultrasonic_distance": 57.36696720123291,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461746.8664212,
+      "ultrasonic_distance": 54.04679775238037,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461747.1042905,
+      "ultrasonic_distance": 56.64323568344116,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461747.3434718,
+      "ultrasonic_distance": 57.44056701660156,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461747.5925212,
+      "ultrasonic_distance": 58.80216360092163,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461747.833532,
+      "ultrasonic_distance": 63.451218605041504,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461748.0766134,
+      "ultrasonic_distance": 57.82492160797119,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461748.3187861,
+      "ultrasonic_distance": 60.96518039703369,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461748.5619016,
+      "ultrasonic_distance": 58.356475830078125,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461748.8035758,
+      "ultrasonic_distance": 58.67949724197388,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461749.0448391,
+      "ultrasonic_distance": 57.39558935165405,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461749.2833564,
+      "ultrasonic_distance": 57.00305700302124,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461749.522806,
+      "ultrasonic_distance": 56.94172382354736,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461749.7613935,
+      "ultrasonic_distance": 57.66545534133911,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461749.9985435,
+      "ultrasonic_distance": 57.289278507232666,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461750.2367113,
+      "ultrasonic_distance": 57.41194486618042,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461750.4753444,
+      "ultrasonic_distance": 57.00714588165283,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461750.7158852,
+      "ultrasonic_distance": 63.5043740272522,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461750.9570706,
+      "ultrasonic_distance": 63.655662536621094,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461751.1958165,
+      "ultrasonic_distance": 63.201797008514404,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461751.4340582,
+      "ultrasonic_distance": 60.086071491241455,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461751.6733913,
+      "ultrasonic_distance": 58.53229761123657,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461751.9116843,
+      "ultrasonic_distance": 55.79274892807007,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461752.150215,
+      "ultrasonic_distance": 56.48376941680908,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461752.3936563,
+      "ultrasonic_distance": 55.28981685638428,
+      "person_detected": true,
+      "person_bbox": 637,
+      "confidence": 0.9596565365791321
+    },
+    {
+      "timestamp": 1755461752.6411247,
+      "ultrasonic_distance": 66.06401205062866,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461752.884453,
+      "ultrasonic_distance": 62.76428699493408,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461753.130403,
+      "ultrasonic_distance": 68.7831163406372,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461753.37532,
+      "ultrasonic_distance": 67.32747554779053,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461753.6204157,
+      "ultrasonic_distance": 67.03716516494751,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461753.8752158,
+      "ultrasonic_distance": 69.73991394042969,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461754.1210322,
+      "ultrasonic_distance": 66.15805625915527,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461754.3636131,
+      "ultrasonic_distance": 57.58776664733887,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461754.606962,
+      "ultrasonic_distance": 57.264745235443115,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461754.8527727,
+      "ultrasonic_distance": 68.4355616569519,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461755.0969963,
+      "ultrasonic_distance": 64.06455039978027,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461755.340412,
+      "ultrasonic_distance": 57.10936784744263,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461755.584139,
+      "ultrasonic_distance": 57.11345672607422,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461755.826955,
+      "ultrasonic_distance": 57.00305700302124,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461756.070986,
+      "ultrasonic_distance": 59.66082811355591,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461756.3146174,
+      "ultrasonic_distance": 57.93123245239258,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461756.5568712,
+      "ultrasonic_distance": 50.33409595489502,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461756.7970347,
+      "ultrasonic_distance": 47.49641418457031,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461757.0378957,
+      "ultrasonic_distance": 46.44966125488281,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461757.278377,
+      "ultrasonic_distance": 44.065845012664795,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461757.5212326,
+      "ultrasonic_distance": 54.59470748901367,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461757.7611327,
+      "ultrasonic_distance": 46.273839473724365,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461758.000203,
+      "ultrasonic_distance": 41.40807390213013,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461758.240792,
+      "ultrasonic_distance": 43.30940246582031,
+      "person_detected": true,
+      "person_bbox": 29,
+      "confidence": 0.8019506931304932
+    },
+    {
+      "timestamp": 1755461758.4814181,
+      "ultrasonic_distance": 43.28895807266235,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461758.7246895,
+      "ultrasonic_distance": 58.70811939239502,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461758.9668777,
+      "ultrasonic_distance": 59.84482765197754,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461759.2093601,
+      "ultrasonic_distance": 60.93655824661255,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461759.4520097,
+      "ultrasonic_distance": 59.971582889556885,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461759.6939576,
+      "ultrasonic_distance": 60.36820411682129,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461759.9372604,
+      "ultrasonic_distance": 59.11291837692261,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461760.1796784,
+      "ultrasonic_distance": 61.21460199356079,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461760.4373777,
+      "ultrasonic_distance": 62.96055316925049,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461760.6838586,
+      "ultrasonic_distance": 74.95732307434082,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461760.9283423,
+      "ultrasonic_distance": 67.58507490158081,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461761.1708534,
+      "ultrasonic_distance": 63.52890729904175,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461761.4151645,
+      "ultrasonic_distance": 64.77192640304565,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461761.7178276,
+      "ultrasonic_distance": 62.80108690261841,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461761.9599602,
+      "ultrasonic_distance": 62.80926465988159,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461762.2024739,
+      "ultrasonic_distance": 62.82562017440796,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461762.446343,
+      "ultrasonic_distance": 62.46988773345947,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461762.7210839,
+      "ultrasonic_distance": 70.70488929748535,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461763.0030572,
+      "ultrasonic_distance": 303.2966613769531,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461763.2913675,
+      "ultrasonic_distance": 303.9140820503235,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461763.5484796,
+      "ultrasonic_distance": 62.89921998977661,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461763.8511024,
+      "ultrasonic_distance": 71.96835279464722,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461764.1833253,
+      "ultrasonic_distance": 999.0,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461764.5178573,
+      "ultrasonic_distance": 999.0,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461764.8872187,
+      "ultrasonic_distance": 999.0,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461765.1902354,
+      "ultrasonic_distance": 3.103458881378174,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461765.423864,
+      "ultrasonic_distance": 4.685854911804199,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461765.668829,
+      "ultrasonic_distance": 62.22046613693237,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461765.9149454,
+      "ultrasonic_distance": 61.05104684829712,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461766.156144,
+      "ultrasonic_distance": 60.678958892822266,
+      "person_detected": true,
+      "person_bbox": 79,
+      "confidence": 0.8273406028747559
+    },
+    {
+      "timestamp": 1755461766.3917222,
+      "ultrasonic_distance": 25.05255937576294,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461766.630245,
+      "ultrasonic_distance": 34.18302536010742,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461766.8733196,
+      "ultrasonic_distance": 58.79807472229004,
+      "person_detected": true,
+      "person_bbox": 319,
+      "confidence": 0.6662419438362122
+    },
+    {
+      "timestamp": 1755461767.1189017,
+      "ultrasonic_distance": 57.00714588165283,
+      "person_detected": true,
+      "person_bbox": 477,
+      "confidence": 0.6740118861198425
+    },
+    {
+      "timestamp": 1755461767.3610065,
+      "ultrasonic_distance": 56.98670148849487,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461767.6024454,
+      "ultrasonic_distance": 54.962706565856934,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461767.8693252,
+      "ultrasonic_distance": 55.261194705963135,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461768.1127813,
+      "ultrasonic_distance": 55.2775502204895,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461768.3532164,
+      "ultrasonic_distance": 55.2775502204895,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461768.5954823,
+      "ultrasonic_distance": 55.97265958786011,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461768.837992,
+      "ultrasonic_distance": 56.99896812438965,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461769.0822775,
+      "ultrasonic_distance": 57.71452188491821,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461769.3237526,
+      "ultrasonic_distance": 57.41603374481201,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461769.5620937,
+      "ultrasonic_distance": 38.443636894226074,
+      "person_detected": true,
+      "person_bbox": 213,
+      "confidence": 0.5456670522689819
+    },
+    {
+      "timestamp": 1755461769.8050804,
+      "ultrasonic_distance": 59.13745164871216,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461770.0487971,
+      "ultrasonic_distance": 63.365352153778076,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461770.4960144,
+      "ultrasonic_distance": 999.0,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461770.7311826,
+      "ultrasonic_distance": 4.064345359802246,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461770.9640903,
+      "ultrasonic_distance": 4.07252311706543,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461771.1979275,
+      "ultrasonic_distance": 4.07252311706543,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461771.4310193,
+      "ultrasonic_distance": 4.060256481170654,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461771.663685,
+      "ultrasonic_distance": 4.068434238433838,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461771.89682,
+      "ultrasonic_distance": 4.060256481170654,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461772.1292915,
+      "ultrasonic_distance": 4.060256481170654,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461772.361646,
+      "ultrasonic_distance": 4.064345359802246,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461772.5940785,
+      "ultrasonic_distance": 4.068434238433838,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461772.827761,
+      "ultrasonic_distance": 4.043900966644287,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461773.0875206,
+      "ultrasonic_distance": 4.052078723907471,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461773.3303304,
+      "ultrasonic_distance": 64.66561555862427,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461773.5741155,
+      "ultrasonic_distance": 63.091397285461426,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461773.816508,
+      "ultrasonic_distance": 62.9033088684082,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461774.0604758,
+      "ultrasonic_distance": 62.817442417144775,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461774.3036892,
+      "ultrasonic_distance": 59.538161754608154,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461774.5472057,
+      "ultrasonic_distance": 61.94651126861572,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461774.7892067,
+      "ultrasonic_distance": 57.38741159439087,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461775.0317726,
+      "ultrasonic_distance": 63.76606225967407,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461775.2607853,
+      "ultrasonic_distance": 4.685854911804199,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461775.490505,
+      "ultrasonic_distance": 4.681766033172607,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461775.723382,
+      "ultrasonic_distance": 4.694032669067383,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461775.9626806,
+      "ultrasonic_distance": 59.86936092376709,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461776.204072,
+      "ultrasonic_distance": 49.92929697036743,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461776.446736,
+      "ultrasonic_distance": 49.33232069015503,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461776.6885211,
+      "ultrasonic_distance": 50.50173997879028,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461776.9300098,
+      "ultrasonic_distance": 51.35222673416138,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461777.1714985,
+      "ultrasonic_distance": 50.49765110015869,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461777.4134023,
+      "ultrasonic_distance": 50.45676231384277,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461777.6552114,
+      "ultrasonic_distance": 50.444495677948,
+      "person_detected": true,
+      "person_bbox": 238,
+      "confidence": 0.8382861614227295
+    },
+    {
+      "timestamp": 1755461777.8967216,
+      "ultrasonic_distance": 50.595784187316895,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461778.1398067,
+      "ultrasonic_distance": 50.10920763015747,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461778.3829954,
+      "ultrasonic_distance": 50.440406799316406,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461778.6296659,
+      "ultrasonic_distance": 59.95931625366211,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461778.863139,
+      "ultrasonic_distance": 3.397858142852783,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461779.098179,
+      "ultrasonic_distance": 4.718565940856934,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461779.331083,
+      "ultrasonic_distance": 3.426480293273926,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461779.5637658,
+      "ultrasonic_distance": 4.730832576751709,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461779.7959523,
+      "ultrasonic_distance": 4.694032669067383,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461780.0283747,
+      "ultrasonic_distance": 4.702210426330566,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461780.2613814,
+      "ultrasonic_distance": 4.702210426330566,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461780.494024,
+      "ultrasonic_distance": 4.71038818359375,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461780.7276042,
+      "ultrasonic_distance": 4.71038818359375,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461780.9604352,
+      "ultrasonic_distance": 4.698121547698975,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461781.19577,
+      "ultrasonic_distance": 4.698121547698975,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461781.4288025,
+      "ultrasonic_distance": 4.714477062225342,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461781.6625516,
+      "ultrasonic_distance": 4.730832576751709,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461781.8958952,
+      "ultrasonic_distance": 4.702210426330566,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461782.129071,
+      "ultrasonic_distance": 4.694032669067383,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461782.3622513,
+      "ultrasonic_distance": 4.689943790435791,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461782.5950203,
+      "ultrasonic_distance": 4.71038818359375,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461782.824018,
+      "ultrasonic_distance": 4.706299304962158,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461783.0568345,
+      "ultrasonic_distance": 4.71038818359375,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461783.3081195,
+      "ultrasonic_distance": 4.722654819488525,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461783.5389054,
+      "ultrasonic_distance": 4.730832576751709,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461783.770174,
+      "ultrasonic_distance": 4.706299304962158,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461784.0008512,
+      "ultrasonic_distance": 4.689943790435791,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461784.2324817,
+      "ultrasonic_distance": 4.698121547698975,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461784.4643068,
+      "ultrasonic_distance": 4.739010334014893,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461784.6954174,
+      "ultrasonic_distance": 4.706299304962158,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461784.9256575,
+      "ultrasonic_distance": 4.706299304962158,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461785.156316,
+      "ultrasonic_distance": 4.698121547698975,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461785.3869405,
+      "ultrasonic_distance": 4.689943790435791,
+      "person_detected": true,
+      "person_bbox": 436,
+      "confidence": 0.7234575748443604
+    },
+    {
+      "timestamp": 1755461785.631358,
+      "ultrasonic_distance": 59.96749401092529,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461785.8767633,
+      "ultrasonic_distance": 59.93887186050415,
+      "person_detected": true,
+      "person_bbox": 49,
+      "confidence": 0.6789328455924988
+    },
+    {
+      "timestamp": 1755461786.121174,
+      "ultrasonic_distance": 60.200560092926025,
+      "person_detected": true,
+      "person_bbox": 74,
+      "confidence": 0.8820536732673645
+    },
+    {
+      "timestamp": 1755461786.3672438,
+      "ultrasonic_distance": 60.82206964492798,
+      "person_detected": true,
+      "person_bbox": 72,
+      "confidence": 0.8532780408859253
+    },
+    {
+      "timestamp": 1755461786.6101499,
+      "ultrasonic_distance": 57.42830038070679,
+      "person_detected": true,
+      "person_bbox": 70,
+      "confidence": 0.8826271295547485
+    },
+    {
+      "timestamp": 1755461786.8536303,
+      "ultrasonic_distance": 57.38332271575928,
+      "person_detected": true,
+      "person_bbox": 79,
+      "confidence": 0.8647373914718628
+    },
+    {
+      "timestamp": 1755461787.0962434,
+      "ultrasonic_distance": 54.00590896606445,
+      "person_detected": true,
+      "person_bbox": 71,
+      "confidence": 0.9147266745567322
+    },
+    {
+      "timestamp": 1755461787.33834,
+      "ultrasonic_distance": 55.11808395385742,
+      "person_detected": true,
+      "person_bbox": 65,
+      "confidence": 0.8020786046981812
+    },
+    {
+      "timestamp": 1755461787.5795534,
+      "ultrasonic_distance": 53.75648736953735,
+      "person_detected": true,
+      "person_bbox": 70,
+      "confidence": 0.9031786918640137
+    },
+    {
+      "timestamp": 1755461787.822183,
+      "ultrasonic_distance": 54.68875169754028,
+      "person_detected": true,
+      "person_bbox": 73,
+      "confidence": 0.8835009932518005
+    },
+    {
+      "timestamp": 1755461788.0615985,
+      "ultrasonic_distance": 55.829548835754395,
+      "person_detected": true,
+      "person_bbox": 70,
+      "confidence": 0.9031602144241333
+    },
+    {
+      "timestamp": 1755461788.3036692,
+      "ultrasonic_distance": 54.946351051330566,
+      "person_detected": true,
+      "person_bbox": 69,
+      "confidence": 0.896462619304657
+    },
+    {
+      "timestamp": 1755461788.544492,
+      "ultrasonic_distance": 54.93817329406738,
+      "person_detected": true,
+      "person_bbox": 73,
+      "confidence": 0.8645735383033752
+    },
+    {
+      "timestamp": 1755461788.788801,
+      "ultrasonic_distance": 55.764126777648926,
+      "person_detected": true,
+      "person_bbox": 75,
+      "confidence": 0.8587757349014282
+    },
+    {
+      "timestamp": 1755461789.0304835,
+      "ultrasonic_distance": 54.921817779541016,
+      "person_detected": true,
+      "person_bbox": 70,
+      "confidence": 0.8913920521736145
+    },
+    {
+      "timestamp": 1755461789.2728336,
+      "ultrasonic_distance": 55.81319332122803,
+      "person_detected": true,
+      "person_bbox": 385,
+      "confidence": 0.752431333065033
+    },
+    {
+      "timestamp": 1755461789.5159924,
+      "ultrasonic_distance": 56.606435775756836,
+      "person_detected": true,
+      "person_bbox": 41,
+      "confidence": 0.7207528352737427
+    },
+    {
+      "timestamp": 1755461789.7651246,
+      "ultrasonic_distance": 56.651413440704346,
+      "person_detected": true,
+      "person_bbox": 49,
+      "confidence": 0.8824325799942017
+    },
+    {
+      "timestamp": 1755461790.034716,
+      "ultrasonic_distance": 57.11754560470581,
+      "person_detected": true,
+      "person_bbox": 50,
+      "confidence": 0.8398609757423401
+    },
+    {
+      "timestamp": 1755461790.2767167,
+      "ultrasonic_distance": 57.11754560470581,
+      "person_detected": true,
+      "person_bbox": 23,
+      "confidence": 0.7994307279586792
+    },
+    {
+      "timestamp": 1755461790.5214415,
+      "ultrasonic_distance": 57.1216344833374,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461790.7674122,
+      "ultrasonic_distance": 57.129812240600586,
+      "person_detected": true,
+      "person_bbox": 48,
+      "confidence": 0.8236836194992065
+    },
+    {
+      "timestamp": 1755461791.0094664,
+      "ultrasonic_distance": 57.125723361968994,
+      "person_detected": true,
+      "person_bbox": 56,
+      "confidence": 0.8700477480888367
+    },
+    {
+      "timestamp": 1755461791.2521844,
+      "ultrasonic_distance": 57.285189628601074,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461791.4961073,
+      "ultrasonic_distance": 58.401453495025635,
+      "person_detected": true,
+      "person_bbox": 17,
+      "confidence": 0.7228862643241882
+    },
+    {
+      "timestamp": 1755461791.7398858,
+      "ultrasonic_distance": 60.106515884399414,
+      "person_detected": true,
+      "person_bbox": 53,
+      "confidence": 0.8880659341812134
+    },
+    {
+      "timestamp": 1755461791.9826708,
+      "ultrasonic_distance": 57.24838972091675,
+      "person_detected": true,
+      "person_bbox": 61,
+      "confidence": 0.7942008376121521
+    },
+    {
+      "timestamp": 1755461792.2270617,
+      "ultrasonic_distance": 57.649099826812744,
+      "person_detected": true,
+      "person_bbox": 14,
+      "confidence": 0.692396342754364
+    },
+    {
+      "timestamp": 1755461792.4681215,
+      "ultrasonic_distance": 61.406779289245605,
+      "person_detected": true,
+      "person_bbox": 38,
+      "confidence": 0.7516734004020691
+    },
+    {
+      "timestamp": 1755461792.710779,
+      "ultrasonic_distance": 61.38633489608765,
+      "person_detected": true,
+      "person_bbox": 319,
+      "confidence": 0.8030242919921875
+    },
+    {
+      "timestamp": 1755461792.9525743,
+      "ultrasonic_distance": 57.285189628601074,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461793.1953633,
+      "ultrasonic_distance": 57.29336738586426,
+      "person_detected": true,
+      "person_bbox": 33,
+      "confidence": 0.820415735244751
+    },
+    {
+      "timestamp": 1755461793.444572,
+      "ultrasonic_distance": 57.27701187133789,
+      "person_detected": true,
+      "person_bbox": 68,
+      "confidence": 0.8447808623313904
+    },
+    {
+      "timestamp": 1755461793.6895638,
+      "ultrasonic_distance": 60.948824882507324,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461793.93284,
+      "ultrasonic_distance": 60.49904823303223,
+      "person_detected": true,
+      "person_bbox": 34,
+      "confidence": 0.6321917176246643
+    },
+    {
+      "timestamp": 1755461794.1751223,
+      "ultrasonic_distance": 59.69353914260864,
+      "person_detected": true,
+      "person_bbox": 51,
+      "confidence": 0.7036100029945374
+    },
+    {
+      "timestamp": 1755461794.4178672,
+      "ultrasonic_distance": 58.80216360092163,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461794.65961,
+      "ultrasonic_distance": 57.219767570495605,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461794.9030116,
+      "ultrasonic_distance": 56.09532594680786,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461795.1451569,
+      "ultrasonic_distance": 57.41603374481201,
+      "person_detected": true,
+      "person_bbox": 122,
+      "confidence": 0.6407143473625183
+    },
+    {
+      "timestamp": 1755461795.3857899,
+      "ultrasonic_distance": 56.970345973968506,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461795.6187522,
+      "ultrasonic_distance": 7.310914993286133,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461795.8608675,
+      "ultrasonic_distance": 57.09710121154785,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461796.0974543,
+      "ultrasonic_distance": 11.416149139404297,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461796.3535273,
+      "ultrasonic_distance": 57.399678230285645,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461796.6065187,
+      "ultrasonic_distance": 64.25672769546509,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461796.9509583,
+      "ultrasonic_distance": 64.8005485534668,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461797.1947134,
+      "ultrasonic_distance": 67.36018657684326,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461797.429373,
+      "ultrasonic_distance": 12.47107982635498,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461797.6727977,
+      "ultrasonic_distance": 70.47591209411621,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461797.9139156,
+      "ultrasonic_distance": 37.670838832855225,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461798.1585703,
+      "ultrasonic_distance": 64.91503715515137,
+      "person_detected": true,
+      "person_bbox": 13,
+      "confidence": 0.9492368102073669
+    },
+    {
+      "timestamp": 1755461798.4037364,
+      "ultrasonic_distance": 66.18258953094482,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461798.6411715,
+      "ultrasonic_distance": 23.065364360809326,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461798.876523,
+      "ultrasonic_distance": 17.287778854370117,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461799.1136074,
+      "ultrasonic_distance": 24.206161499023438,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461799.3589,
+      "ultrasonic_distance": 71.49404287338257,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461799.6051478,
+      "ultrasonic_distance": 80.66948652267456,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461799.8520014,
+      "ultrasonic_distance": 82.85294771194458,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461800.0993369,
+      "ultrasonic_distance": 81.07019662857056,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461800.3471062,
+      "ultrasonic_distance": 81.96157217025757,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461800.5943308,
+      "ultrasonic_distance": 83.96921157836914,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461800.8406672,
+      "ultrasonic_distance": 82.98379182815552,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461801.0904834,
+      "ultrasonic_distance": 84.20227766036987,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461801.3342392,
+      "ultrasonic_distance": 82.51765966415405,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461801.6450486,
+      "ultrasonic_distance": 86.72511577606201,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461801.8910968,
+      "ultrasonic_distance": 78.54735851287842,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461802.1386514,
+      "ultrasonic_distance": 78.26522588729858,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461802.3843968,
+      "ultrasonic_distance": 73.09279441833496,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461802.6301668,
+      "ultrasonic_distance": 75.34167766571045,
+      "person_detected": true,
+      "person_bbox": 585,
+      "confidence": 0.898733913898468
+    },
+    {
+      "timestamp": 1755461802.8704762,
+      "ultrasonic_distance": 73.02737236022949,
+      "person_detected": true,
+      "person_bbox": 503,
+      "confidence": 0.8817272782325745
+    },
+    {
+      "timestamp": 1755461803.1406357,
+      "ultrasonic_distance": 238.0136251449585,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461803.3937883,
+      "ultrasonic_distance": 68.60729455947876,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461803.6397328,
+      "ultrasonic_distance": 67.85494089126587,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461803.8842797,
+      "ultrasonic_distance": 68.33333969116211,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461804.1321216,
+      "ultrasonic_distance": 67.86311864852905,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461804.3787715,
+      "ultrasonic_distance": 70.52088975906372,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461804.6254148,
+      "ultrasonic_distance": 67.49511957168579,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461804.8687544,
+      "ultrasonic_distance": 68.30880641937256,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461805.1127183,
+      "ultrasonic_distance": 70.86844444274902,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461805.35657,
+      "ultrasonic_distance": 67.90400743484497,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461805.5995326,
+      "ultrasonic_distance": 67.89582967758179,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461805.85133,
+      "ultrasonic_distance": 70.88888883590698,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461806.0955234,
+      "ultrasonic_distance": 69.1838264465332,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461806.341842,
+      "ultrasonic_distance": 69.61724758148193,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461806.5894485,
+      "ultrasonic_distance": 68.71360540390015,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461806.8924541,
+      "ultrasonic_distance": 70.41866779327393,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461807.1441073,
+      "ultrasonic_distance": 67.46649742126465,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461807.4668167,
+      "ultrasonic_distance": 68.72178316116333,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461807.7103252,
+      "ultrasonic_distance": 70.86435556411743,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461807.9546816,
+      "ultrasonic_distance": 70.89706659317017,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461808.1982143,
+      "ultrasonic_distance": 70.87253332138062,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461808.4519572,
+      "ultrasonic_distance": 70.84800004959106,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461808.7708461,
+      "ultrasonic_distance": 67.84676313400269,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461809.0436301,
+      "ultrasonic_distance": 69.60498094558716,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461809.3216584,
+      "ultrasonic_distance": 67.91218519210815,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461809.5953422,
+      "ultrasonic_distance": 70.88479995727539,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461809.839033,
+      "ultrasonic_distance": 70.49226760864258,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461810.0824587,
+      "ultrasonic_distance": 67.91218519210815,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461810.3271704,
+      "ultrasonic_distance": 67.85494089126587,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461810.5710785,
+      "ultrasonic_distance": 67.85902976989746,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461810.8143172,
+      "ultrasonic_distance": 67.87129640579224,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461811.0579557,
+      "ultrasonic_distance": 67.4910306930542,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461811.3088808,
+      "ultrasonic_distance": 67.45014190673828,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461811.5544455,
+      "ultrasonic_distance": 67.46240854263306,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461811.8095746,
+      "ultrasonic_distance": 67.89991855621338,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461812.0535657,
+      "ultrasonic_distance": 68.76267194747925,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461812.3018835,
+      "ultrasonic_distance": 99.42517280578613,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461812.5428233,
+      "ultrasonic_distance": 70.88888883590698,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461812.783276,
+      "ultrasonic_distance": 67.9408073425293,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461813.024971,
+      "ultrasonic_distance": 71.30186557769775,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    },
+    {
+      "timestamp": 1755461813.2753441,
+      "ultrasonic_distance": 67.45423078536987,
+      "person_detected": false,
+      "person_bbox": null,
+      "confidence": 0.0
+    }
+  ],
+  "motor_commands": [
+    {
+      "timestamp": 1755461732.328356,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461732.9531338,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461733.3276994,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461733.6992986,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461734.0737746,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461734.4433377,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461734.8203564,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461735.1996024,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461735.4371896,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461735.6779428,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461735.9162679,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461736.157246,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461736.399029,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461736.6395776,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461736.8720055,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461737.110327,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461737.5595164,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461737.7950232,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461738.0292404,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461738.2646022,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461738.499335,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461738.8032897,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461739.0412781,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461739.2840223,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461739.5923402,
+      "left_speed": 100,
+      "right_speed": 93.9529340153774,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461739.8366275,
+      "left_speed": 100,
+      "right_speed": 88.43844886695643,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461740.0757127,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461740.3127737,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461740.5488906,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461740.7859092,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461741.0233436,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461741.2613342,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461741.4993746,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461741.736949,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461741.9743507,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461742.2140303,
+      "left_speed": 25,
+      "right_speed": -25,
+      "action": "search"
+    },
+    {
+      "timestamp": 1755461742.4601302,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461742.696431,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461742.9993732,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461743.2336323,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461743.4746182,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461743.712839,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461743.955352,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461744.1994162,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461744.435548,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461744.6808736,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461744.924843,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461745.1667402,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461745.4102142,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461745.654029,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461745.898341,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461746.1405222,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461746.383882,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461746.625296,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461746.8664804,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461747.1043465,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461747.3435266,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461747.5925899,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461747.8335915,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461748.0767,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461748.3188426,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461748.561964,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461748.803636,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461749.044896,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461749.2834122,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461749.5228686,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461749.7614517,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461749.9986022,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461750.236765,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461750.4754007,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461750.7159388,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461750.9571316,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461751.195876,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461751.4341137,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461751.6734464,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461751.9117389,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461752.1502705,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461752.3937216,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461752.641179,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461752.884521,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461753.1304588,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461753.3753772,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461753.6205008,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461753.8752775,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461754.1210926,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461754.3636703,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461754.6070175,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461754.8528614,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461755.0970528,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461755.340468,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461755.584233,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461755.8270147,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461756.0710416,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461756.3146827,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461756.5569296,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461756.79709,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461757.0379531,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461757.278434,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461757.5212917,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461757.7611911,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461758.0002654,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461758.2408578,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461758.4815066,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461758.7247496,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461758.966937,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461759.2094207,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461759.4520714,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461759.694017,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461759.9373188,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461760.1797752,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461760.4374378,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461760.683921,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461760.928401,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461761.1709144,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461761.4152544,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461761.7178917,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461761.9600208,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461762.202535,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461762.4464412,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461762.7211466,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461763.0031147,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461763.291429,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461763.5485535,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461763.8511617,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461764.1833863,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461764.5179179,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461764.8872802,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461765.1902914,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461765.423917,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461765.668886,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461765.9150035,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461766.1562111,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461766.391784,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461766.630306,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461766.873384,
+      "left_speed": 99.32645041604316,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461767.1189706,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461767.361066,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461767.6025078,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461767.8693855,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461768.112843,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461768.3532789,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461768.5955439,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461768.8380518,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461769.0823376,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461769.3238077,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461769.562161,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461769.8051364,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461770.0488567,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461770.496069,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461770.7312388,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461770.9641445,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461771.197984,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461771.4310749,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461771.663741,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461771.8968773,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461772.1293483,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461772.3617008,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461772.5941343,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461772.8278172,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461773.0875762,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461773.3303847,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461773.5742064,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461773.8165681,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461774.060533,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461774.303748,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461774.5472665,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461774.7892625,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461775.0318294,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461775.2608418,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461775.4905608,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461775.7234373,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461775.9627368,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461776.2041306,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461776.4467947,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461776.6885762,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461776.9300673,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461777.171558,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461777.4134603,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461777.655277,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461777.8967888,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461778.1398654,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461778.3830516,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461778.6297345,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461778.8631961,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461779.098235,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461779.331138,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461779.5638216,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461779.79601,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461780.028431,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461780.2614374,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461780.4940803,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461780.727665,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461780.960491,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461781.1958275,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461781.428858,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461781.6626096,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461781.895951,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461782.1291277,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461782.3623073,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461782.5950809,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461782.8240778,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461783.0568986,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461783.3081794,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461783.5389678,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461783.770234,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461784.0009403,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461784.2325695,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461784.4643633,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461784.6954725,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461784.92572,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461785.15637,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461785.387007,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461785.6314209,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461785.876881,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461786.1212454,
+      "left_speed": 48.288154193630405,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461786.3673482,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461786.6102185,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461786.853697,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461787.0963068,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461787.3384078,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461787.5796173,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461787.82226,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461788.0616632,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461788.303732,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461788.5445552,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461788.7888644,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461789.0305774,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461789.2729025,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461789.5160568,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461789.765232,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461790.0348384,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461790.2767828,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461790.5214972,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461790.7674754,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461791.0095305,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461791.252242,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461791.4962041,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461791.7399557,
+      "left_speed": 46.64664644874321,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461791.982735,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461792.2271352,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461792.4681845,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461792.7108452,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461792.9526303,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461793.1954632,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461793.4446332,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461793.689621,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461793.9329052,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461794.175187,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461794.4179251,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461794.6596773,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461794.9030712,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461795.1452208,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461795.385844,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461795.6188076,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461795.8609538,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461796.0975108,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461796.3535857,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461796.606578,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461796.951013,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461797.1947732,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461797.42946,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461797.672853,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461797.9139695,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461798.1586747,
+      "left_speed": 50.0,
+      "right_speed": 100,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461798.403795,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461798.6412308,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461798.876579,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461799.1136625,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461799.3589864,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461799.6052034,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461799.852057,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461800.0993948,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461800.3471615,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461800.5943923,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461800.840722,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461801.0905702,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461801.3342943,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461801.6451054,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461801.8911781,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461802.1387072,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461802.3844552,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461802.6302361,
+      "left_speed": 100,
+      "right_speed": 50.0,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461802.8705385,
+      "left_speed": 100,
+      "right_speed": 70.14833206445519,
+      "action": "follow"
+    },
+    {
+      "timestamp": 1755461803.140712,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461803.393883,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461803.6397953,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461803.884341,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461804.132186,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461804.3788314,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461804.625479,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461804.868814,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461805.1127794,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461805.3566978,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461805.599596,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461805.8513896,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461806.095586,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461806.3419023,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461806.5895503,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461806.8925688,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461807.144165,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461807.4668748,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461807.7103846,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461807.9547822,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461808.1982777,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461808.4520922,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461808.7709482,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461809.043756,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461809.3217616,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461809.5954037,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461809.8390958,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461810.0825207,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461810.3272338,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461810.57114,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461810.8143806,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461811.058018,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461811.308944,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461811.554544,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461811.8096356,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461812.0536659,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461812.3019462,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461812.542883,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461812.7833698,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461813.025029,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    },
+    {
+      "timestamp": 1755461813.2754056,
+      "left_speed": 0.0,
+      "right_speed": 0.0,
+      "action": "stop"
+    }
+  ],
+  "performance_metrics": {
+    "total_frames": 324,
+    "detection_rate": 0.15432098765432098,
+    "total_detections": 50,
+    "session_duration": 16.2,
+    "distance_stats": {
+      "mean": 50.66823040056378,
+      "min": 2.4083495140075684,
+      "max": 303.9140820503235
+    }
+  },
+  "events": [
+    {
+      "timestamp": 1755461731.993921,
+      "event": "mode_started",
+      "details": {
+        "duration": 300
+      }
+    },
+    {
+      "timestamp": 1755461813.517891,
+      "event": "mode_stopped",
+      "details": {}
+    }
+  ]
+}

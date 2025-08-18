@@ -1,0 +1,7 @@
+
+opencv-python>=4.5.0
+numpy>=1.19.0
+tflite-runtime>=2.5.0
+picamera2>=0.3.0  # For Raspberry Pi
+RPi.LGPIO>=0.7.0   # For Raspberry Pi
+dataclasses>=0.6  # For Python < 3.7 compatibility

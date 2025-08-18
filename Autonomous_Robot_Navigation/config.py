@@ -5,18 +5,20 @@ import os
 
 
 # Hardware configuration
-HARDWARE_AVAILABLE = True   # Can be toggled between true and false
-                            # False for development, True for testing
+HARDWARE_AVAILABLE = True   # Can be toggled between true and false. False for development, True for testing
 
-ULTRASONIC_TRIGGER_PIN = 18
-ULTRASONIC_ECHO_PIN = 24
-MOTOR_LEFT_PIN = (12, 16) # PWM, Direction
-MOTOR_RIGHT_PIN = (20, 21) # PWM, Direction
+ULTRASONIC_TRIGGER_PIN = 27
+ULTRASONIC_ECHO_PIN = 22
+MOTOR_LEFT_PINS = (24, 23) # PWM, Direction
+MOTOR_RIGHT_PINS = (5, 6) # PWM, Direction
 PWM_FREQUENCY = 1000
+IR01 = 16
+IR02 = 20
+IR03 = 21
 
 
 # Camera Fonfiguration
-CAMERDA_WIDTH = 640 # Setting smaller to compensate for processing power of Raspberry Pi
+CAMERA_WIDTH = 640 # Setting smaller to compensate for processing power of Raspberry Pi
 CAMERA_HEIGHT = 480
 CAMERA_FPS = 20
 
