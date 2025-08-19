@@ -1,3 +1,5 @@
 robot_venv/
 models/
-
+*.pb
+*.tflite
+*.tar.gz
